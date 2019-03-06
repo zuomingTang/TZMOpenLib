@@ -1,0 +1,22 @@
+{
+  "name": "TZMOpenLib",
+  "version": "0.1.0",
+  "summary": "A short description of TZMOpenLib.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/zuomingTang/TZMOpenLib",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "zuomingTang": "414933949@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/zuomingTang/TZMOpenLib.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "TZMOpenLib/Classes/**/*"
+}

@@ -1,0 +1,6 @@
+framework module TZMOpenLib {
+  umbrella header "TZMOpenLib-umbrella.h"
+
+  export *
+  module * { export * }
+}

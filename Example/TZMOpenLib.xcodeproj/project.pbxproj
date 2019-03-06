@@ -61,10 +61,10 @@
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		646D9C04C8BC67C147B9169D /* Pods-TZMOpenLib_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TZMOpenLib_Tests.release.xcconfig"; path = "Target Support Files/Pods-TZMOpenLib_Tests/Pods-TZMOpenLib_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		6731CFDAA3423835066273DA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		694BAF685512C9DC79CEB788 /* TZMOpenLib.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = TZMOpenLib.podspec; path = ../TZMOpenLib.podspec; sourceTree = "<group>"; };
+		6731CFDAA3423835066273DA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		694BAF685512C9DC79CEB788 /* TZMOpenLib.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = TZMOpenLib.podspec; path = ../TZMOpenLib.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		738FF20A460C12FD04C5F2D3 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		738FF20A460C12FD04C5F2D3 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		74EFF61C5BA1085A5B3439DE /* Pods-TZMOpenLib_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TZMOpenLib_Tests.debug.xcconfig"; path = "Target Support Files/Pods-TZMOpenLib_Tests/Pods-TZMOpenLib_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,7 +103,6 @@
 				74EFF61C5BA1085A5B3439DE /* Pods-TZMOpenLib_Tests.debug.xcconfig */,
 				646D9C04C8BC67C147B9169D /* Pods-TZMOpenLib_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
