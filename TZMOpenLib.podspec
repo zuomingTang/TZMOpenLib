@@ -12,9 +12,9 @@ Pod::Spec.new do |s|
   s.summary          = 'TZMOpenLib'
   
   s.subspec 'Manager' do |cs|
-      s.source_files = 'TZMOpenLib/Classes/Manager'
-      s.public_header_files = 'TZMOpenLib/Classes/Manager'
-      s.frameworks = 'UIKit', 'Foundation'
+      cs.source_files = 'TZMOpenLib/Classes/Manager/**/*'
+      cs.public_header_files = 'TZMOpenLib/Classes/Manager/**/*.h'
+      cs.frameworks = 'UIKit', 'Foundation'
       # s.dependency 'AFNetworking', '~> 2.3'
   end
 
@@ -42,6 +42,5 @@ TODO: TZMOpenLib.
 
   s.source_files = 'TZMOpenLib/Classes/**/*'
   s.public_header_files = 'TZMOpenLib/Classes/**/*.h'
-  s.frameworks = 'UIKit', 'Foundation'
   # s.dependency 'AFNetworking', '~> 2.3'
 end
