@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20CC2FD8222FD40B0095FA79 /* ReplaceMe.h in Headers */ = {isa = PBXBuildFile; fileRef = 20CC2FD7222FD40B0095FA79 /* ReplaceMe.h */; };
 		3DA2934304F4156921BE752E7960DC9E /* Pods-TZMOpenLib_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A978C90A6FE836734AF786DCF26B1D21 /* Pods-TZMOpenLib_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4CA1B4E90355F3128FE35D1271D31EE6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EFB40531CB700ADF867FEEE78561E78 /* Foundation.framework */; };
-		6851D0DAFEE1EF6043E448E98F2AD8E1 /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F2DDF60F2359D0873D705A4C2040EA /* ReplaceMe.m */; };
 		83A83B9CF7423FC72CA0E76DCD9AA82A /* Pods-TZMOpenLib_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4876C1BA4476F81DEECB98ADB2B6772C /* Pods-TZMOpenLib_Example-dummy.m */; };
 		8CAC522405940446A7E939CB56D45AEE /* TZMPageManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 9365061BD3AAD8541B387F033DC12703 /* TZMPageManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8E1A4EC7C98E5D9703E22051267F8364 /* TZMOpenLib-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E40A5DF9F0BD9C506B8D72152E228A32 /* TZMOpenLib-dummy.m */; };
@@ -40,11 +40,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		05E4CD18F6DB003F20D69ED37DFD8163 /* Pods_TZMOpenLib_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TZMOpenLib_Tests.framework; path = "Pods-TZMOpenLib_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		05E4CD18F6DB003F20D69ED37DFD8163 /* Pods_TZMOpenLib_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TZMOpenLib_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0619AB29B42DBA0C97F02930B48AE12E /* Pods-TZMOpenLib_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TZMOpenLib_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		08C14ECA0F91FE912F8EEB950F8943E6 /* Pods-TZMOpenLib_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TZMOpenLib_Tests-Info.plist"; sourceTree = "<group>"; };
 		0F01EEFDC575AF587CF133AD53AE4063 /* Pods-TZMOpenLib_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TZMOpenLib_Example-umbrella.h"; sourceTree = "<group>"; };
 		1878B531BDFEE2D8FE2EE8698143425F /* Pods-TZMOpenLib_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TZMOpenLib_Example.release.xcconfig"; sourceTree = "<group>"; };
+		20CC2FD7222FD40B0095FA79 /* ReplaceMe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReplaceMe.h; path = TZMOpenLib/Classes/ReplaceMe.h; sourceTree = "<group>"; };
 		231CB80050ED5B2B06661CD74E5FBAFA /* Pods-TZMOpenLib_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TZMOpenLib_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		2BCF7E09C844EC5A51C373B940BE147E /* TZMPageManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TZMPageManager.m; sourceTree = "<group>"; };
 		2EFB40531CB700ADF867FEEE78561E78 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -56,21 +57,20 @@
 		58F681BA0F9FCB1F1E01AAE43B4B0CAD /* Pods-TZMOpenLib_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TZMOpenLib_Tests-dummy.m"; sourceTree = "<group>"; };
 		62B56B436F3CD886C3BEBD031F3DC701 /* TZMOpenLib.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TZMOpenLib.modulemap; sourceTree = "<group>"; };
 		74E404AA6957590324067E330E0EC533 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		8F5CDB9BF04C31AF27FC24639E3C7F9B /* Pods_TZMOpenLib_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TZMOpenLib_Example.framework; path = "Pods-TZMOpenLib_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F5CDB9BF04C31AF27FC24639E3C7F9B /* Pods_TZMOpenLib_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TZMOpenLib_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9365061BD3AAD8541B387F033DC12703 /* TZMPageManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TZMPageManager.h; sourceTree = "<group>"; };
-		A12DAC1A0898C3005A0FDDF3E68694AD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		A12DAC1A0898C3005A0FDDF3E68694AD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		A450C998518BC2F482D572F8432F5F31 /* Pods-TZMOpenLib_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TZMOpenLib_Example.modulemap"; sourceTree = "<group>"; };
 		A978C90A6FE836734AF786DCF26B1D21 /* Pods-TZMOpenLib_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TZMOpenLib_Tests-umbrella.h"; sourceTree = "<group>"; };
 		ABED425AABFA3CABE12EAC344DC7AE12 /* Pods-TZMOpenLib_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TZMOpenLib_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		ACB5451B25C977FE45FD25EF6E1E4B6C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		B36AB396275697EEE1A5B13BA8A38FE3 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BAA9D3D0E3C908A69ABAD3A4B6CA0682 /* TZMOpenLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TZMOpenLib.framework; path = TZMOpenLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C891A7E0E90B4165A8BEF2D26A645527 /* TZMOpenLib.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = TZMOpenLib.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		ACB5451B25C977FE45FD25EF6E1E4B6C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B36AB396275697EEE1A5B13BA8A38FE3 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BAA9D3D0E3C908A69ABAD3A4B6CA0682 /* TZMOpenLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TZMOpenLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C891A7E0E90B4165A8BEF2D26A645527 /* TZMOpenLib.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = TZMOpenLib.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		CA867C7668BD2CF8F4485E80CDF9BC4A /* Pods-TZMOpenLib_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TZMOpenLib_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		D1BC91A1DCF654CF51074F7AF37AF26B /* Pods-TZMOpenLib_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TZMOpenLib_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		DF2A147516FC3E9D5B61565E16B5BD9A /* TZMOpenLib.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TZMOpenLib.xcconfig; sourceTree = "<group>"; };
 		E40A5DF9F0BD9C506B8D72152E228A32 /* TZMOpenLib-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TZMOpenLib-dummy.m"; sourceTree = "<group>"; };
-		E7F2DDF60F2359D0873D705A4C2040EA /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ReplaceMe.m; path = TZMOpenLib/Classes/ReplaceMe.m; sourceTree = "<group>"; };
 		EF3CF6E55DF76885A6C9ED71E7AC9FF3 /* Pods-TZMOpenLib_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TZMOpenLib_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		F1794238C821F8E40D101BFE3405256A /* Pods-TZMOpenLib_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TZMOpenLib_Example-Info.plist"; sourceTree = "<group>"; };
 		F48A9AE48EFABB11C907A20D452B5E90 /* Pods-TZMOpenLib_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TZMOpenLib_Tests.modulemap"; sourceTree = "<group>"; };
@@ -231,7 +231,7 @@
 		E75159859B135A74C924806559895487 /* TZMOpenLib */ = {
 			isa = PBXGroup;
 			children = (
-				E7F2DDF60F2359D0873D705A4C2040EA /* ReplaceMe.m */,
+				20CC2FD7222FD40B0095FA79 /* ReplaceMe.h */,
 				C9A88D500F8352FB911507CEDD7FD1D8 /* Manager */,
 				DAC0A03FF49F8392C8BF98A9E04ACECF /* Pod */,
 				7C50666D76C234DF4DCAABBD3ABE6FC7 /* Support Files */,
@@ -257,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEE352B746A41970AEB8D43A51811CCF /* Pods-TZMOpenLib_Example-umbrella.h in Headers */,
+				20CC2FD8222FD40B0095FA79 /* ReplaceMe.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,7 +385,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6851D0DAFEE1EF6043E448E98F2AD8E1 /* ReplaceMe.m in Sources */,
 				8E1A4EC7C98E5D9703E22051267F8364 /* TZMOpenLib-dummy.m in Sources */,
 				C30C1AFE90B221EEFF00BF5714482F73 /* TZMPageManager.m in Sources */,
 			);
@@ -538,8 +538,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
