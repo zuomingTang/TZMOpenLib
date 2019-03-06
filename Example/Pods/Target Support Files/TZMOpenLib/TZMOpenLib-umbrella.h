@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "TZMPageManager.h"
 
 FOUNDATION_EXPORT double TZMOpenLibVersionNumber;
 FOUNDATION_EXPORT const unsigned char TZMOpenLibVersionString[];
