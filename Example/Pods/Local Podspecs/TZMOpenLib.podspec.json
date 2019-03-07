@@ -1,6 +1,6 @@
 {
   "name": "TZMOpenLib",
-  "version": "0.1.0",
+  "version": "0.4.0",
   "summary": "TZMOpenLib",
   "description": "TODO: TZMOpenLib.",
   "homepage": "https://github.com/zuomingTang/TZMOpenLib",
@@ -13,15 +13,23 @@
   },
   "source": {
     "git": "https://github.com/zuomingTang/TZMOpenLib.git",
-    "tag": "0.1.0"
+    "tag": "0.4.0"
   },
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "TZMOpenLib/Classes/**/*",
-  "public_header_files": "TZMOpenLib/Classes/**/*.h",
-  "frameworks": [
-    "UIKit",
-    "Foundation"
+  "source_files": "TZMOpenLib/Classes/*",
+  "public_header_files": "TZMOpenLib/Classes/*.h",
+  "subspecs": [
+    {
+      "name": "Manager",
+      "source_files": "TZMOpenLib/Classes/Manager/**/*",
+      "public_header_files": "TZMOpenLib/Classes/Manager/**/*.h",
+      "frameworks": [
+        "UIKit",
+        "Foundation",
+        "Photos"
+      ]
+    }
   ]
 }

@@ -7,19 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		20CC2FD8222FD40B0095FA79 /* ReplaceMe.h in Headers */ = {isa = PBXBuildFile; fileRef = 20CC2FD7222FD40B0095FA79 /* ReplaceMe.h */; };
+		38017CCB74714AC016F2CB999B076981 /* TZMPageManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D4E7597CB65B5BEE67BBC0642532E38 /* TZMPageManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		38B09E6064EBD84117F3AA2918315678 /* TZMOpenLib-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C0A0BE0CDAEA2504FDFC724D09E3BCB /* TZMOpenLib-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3DA2934304F4156921BE752E7960DC9E /* Pods-TZMOpenLib_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A978C90A6FE836734AF786DCF26B1D21 /* Pods-TZMOpenLib_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4CA1B4E90355F3128FE35D1271D31EE6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EFB40531CB700ADF867FEEE78561E78 /* Foundation.framework */; };
+		49A56AF868B57F8A9FB84575F9E862AE /* TZMAlertManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B4CCDB8B8BEB59F73EFB510EC818B2E /* TZMAlertManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		73AC85174F1DA30E8F3C3F44DCCD4F7F /* TZMPushManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEFE5C563B3C65980AC06874EEB358C /* TZMPushManager.m */; };
+		7A95B19D12E8E687E66A588E494C7C5E /* ReplaceMe.h in Headers */ = {isa = PBXBuildFile; fileRef = 615F356A34FC7F70CA5FDE5AC968351D /* ReplaceMe.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		83A83B9CF7423FC72CA0E76DCD9AA82A /* Pods-TZMOpenLib_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4876C1BA4476F81DEECB98ADB2B6772C /* Pods-TZMOpenLib_Example-dummy.m */; };
-		8CAC522405940446A7E939CB56D45AEE /* TZMPageManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 9365061BD3AAD8541B387F033DC12703 /* TZMPageManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8E1A4EC7C98E5D9703E22051267F8364 /* TZMOpenLib-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E40A5DF9F0BD9C506B8D72152E228A32 /* TZMOpenLib-dummy.m */; };
-		9012FBF131D7666E17A80D34B3928556 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EFB40531CB700ADF867FEEE78561E78 /* Foundation.framework */; };
+		84D40C4BAA9DBDA4C8F6369831662D5C /* TZMOpenLib-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A126FBC1C7B4619C1B607D0370890B81 /* TZMOpenLib-dummy.m */; };
+		87F08C0E9363DACDC370660789F738E0 /* TZMPageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 850CA882B7BFB16B94AB56062C6E6C65 /* TZMPageManager.m */; };
+		8B86B9454F41B5D10E31DEA27ADE8812 /* TZMAlertManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF53D089E4C31B52EDC88A53BA7F7D2 /* TZMAlertManager.m */; };
+		9012FBF131D7666E17A80D34B3928556 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C941529ED217628D5A9E2D08DC08D3F9 /* Foundation.framework */; };
+		A33DAD01A83472E51D54955AE9FD9EF4 /* TZMPhotoLibraryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F2489AC1A12A8CCE5447E78398B5FA7E /* TZMPhotoLibraryManager.m */; };
+		A7A3ADA407556140DA9594A34E217BBD /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92BB008AE5B565A738EC6098A9046E37 /* Photos.framework */; };
 		A86EE282121F2FBE058B3FEA24C6C77E /* Pods-TZMOpenLib_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F681BA0F9FCB1F1E01AAE43B4B0CAD /* Pods-TZMOpenLib_Tests-dummy.m */; };
 		AEE352B746A41970AEB8D43A51811CCF /* Pods-TZMOpenLib_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F01EEFDC575AF587CF133AD53AE4063 /* Pods-TZMOpenLib_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BC239E67660F73C6D3CDD16B5C5987B7 /* TZMOpenLib-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FE83AF733777035BE66321BF3A8711FA /* TZMOpenLib-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C30C1AFE90B221EEFF00BF5714482F73 /* TZMPageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BCF7E09C844EC5A51C373B940BE147E /* TZMPageManager.m */; };
-		CDCA8811605673718B7651F3187E8D95 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74E404AA6957590324067E330E0EC533 /* UIKit.framework */; };
-		D5C91327B5AE0100756436B798148900 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EFB40531CB700ADF867FEEE78561E78 /* Foundation.framework */; };
+		B46B57AF5E70D806459053ED4901B87C /* TZMPushManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B5B3F1A1F3D42E846E6E7769AFB0010 /* TZMPushManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BFD4D40FFAA59311D657B1C4FE920CF3 /* TZMImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E316AFBAB67F007E253C2DE7C4E469 /* TZMImagePickerController.m */; };
+		D5C91327B5AE0100756436B798148900 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C941529ED217628D5A9E2D08DC08D3F9 /* Foundation.framework */; };
+		E6CF2B94B0796CF00EAB16F615CA51DA /* TZMImagePickerController.h in Headers */ = {isa = PBXBuildFile; fileRef = C4BF86C3D5AB357CA00E781356CF6E50 /* TZMImagePickerController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECABABB68BB755AC81C5B850FE91AD41 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B476FE8E79FF90129391D9DF1857EA94 /* UIKit.framework */; };
+		F08AE66F16EBFED67D1EE61E80693998 /* TZMPhotoLibraryManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D78B2ED4CC1B5DED474C73BEA0EB94A /* TZMPhotoLibraryManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F09DD270A358AC31A43778764F3D444E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C941529ED217628D5A9E2D08DC08D3F9 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,41 +49,50 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		05E4CD18F6DB003F20D69ED37DFD8163 /* Pods_TZMOpenLib_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TZMOpenLib_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		05E4CD18F6DB003F20D69ED37DFD8163 /* Pods_TZMOpenLib_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TZMOpenLib_Tests.framework; path = "Pods-TZMOpenLib_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0619AB29B42DBA0C97F02930B48AE12E /* Pods-TZMOpenLib_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TZMOpenLib_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		08C14ECA0F91FE912F8EEB950F8943E6 /* Pods-TZMOpenLib_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TZMOpenLib_Tests-Info.plist"; sourceTree = "<group>"; };
+		0B4CCDB8B8BEB59F73EFB510EC818B2E /* TZMAlertManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TZMAlertManager.h; path = TZMOpenLib/Classes/Manager/TZMAlertManager.h; sourceTree = "<group>"; };
 		0F01EEFDC575AF587CF133AD53AE4063 /* Pods-TZMOpenLib_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TZMOpenLib_Example-umbrella.h"; sourceTree = "<group>"; };
+		16D9694063AE648405ED800930A428F8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		1878B531BDFEE2D8FE2EE8698143425F /* Pods-TZMOpenLib_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TZMOpenLib_Example.release.xcconfig"; sourceTree = "<group>"; };
-		20CC2FD7222FD40B0095FA79 /* ReplaceMe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReplaceMe.h; path = TZMOpenLib/Classes/ReplaceMe.h; sourceTree = "<group>"; };
+		20BCB758D556CFC44C2ADD742C93AA77 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		21EBD752CEAA25B6976ED504F5DDE94E /* TZMOpenLib.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TZMOpenLib.modulemap; sourceTree = "<group>"; };
 		231CB80050ED5B2B06661CD74E5FBAFA /* Pods-TZMOpenLib_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TZMOpenLib_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		2BCF7E09C844EC5A51C373B940BE147E /* TZMPageManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TZMPageManager.m; sourceTree = "<group>"; };
-		2EFB40531CB700ADF867FEEE78561E78 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		3143040567DA30974409736A5969E854 /* TZMOpenLib-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TZMOpenLib-Info.plist"; sourceTree = "<group>"; };
+		25E316AFBAB67F007E253C2DE7C4E469 /* TZMImagePickerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TZMImagePickerController.m; path = TZMOpenLib/Classes/Manager/TZMImagePickerController.m; sourceTree = "<group>"; };
+		2AEFE5C563B3C65980AC06874EEB358C /* TZMPushManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TZMPushManager.m; path = TZMOpenLib/Classes/Manager/TZMPushManager.m; sourceTree = "<group>"; };
+		2D4E7597CB65B5BEE67BBC0642532E38 /* TZMPageManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TZMPageManager.h; path = TZMOpenLib/Classes/Manager/TZMPageManager.h; sourceTree = "<group>"; };
+		300127201D75ACA05DCA7D99BB5757ED /* TZMOpenLib-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TZMOpenLib-Info.plist"; sourceTree = "<group>"; };
+		3CF53D089E4C31B52EDC88A53BA7F7D2 /* TZMAlertManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TZMAlertManager.m; path = TZMOpenLib/Classes/Manager/TZMAlertManager.m; sourceTree = "<group>"; };
+		3D78B2ED4CC1B5DED474C73BEA0EB94A /* TZMPhotoLibraryManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TZMPhotoLibraryManager.h; path = TZMOpenLib/Classes/Manager/TZMPhotoLibraryManager.h; sourceTree = "<group>"; };
 		408096AD1DA519DBD53BCE5503A31EA9 /* Pods-TZMOpenLib_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TZMOpenLib_Example-frameworks.sh"; sourceTree = "<group>"; };
-		46C0C8A3F6A384626D770AC403333C90 /* TZMOpenLib-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TZMOpenLib-prefix.pch"; sourceTree = "<group>"; };
 		4876C1BA4476F81DEECB98ADB2B6772C /* Pods-TZMOpenLib_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TZMOpenLib_Example-dummy.m"; sourceTree = "<group>"; };
 		54D9BA0EDD733E39E327AF4D01BDADFA /* Pods-TZMOpenLib_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TZMOpenLib_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		58F681BA0F9FCB1F1E01AAE43B4B0CAD /* Pods-TZMOpenLib_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TZMOpenLib_Tests-dummy.m"; sourceTree = "<group>"; };
-		62B56B436F3CD886C3BEBD031F3DC701 /* TZMOpenLib.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TZMOpenLib.modulemap; sourceTree = "<group>"; };
-		74E404AA6957590324067E330E0EC533 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		8F5CDB9BF04C31AF27FC24639E3C7F9B /* Pods_TZMOpenLib_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TZMOpenLib_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9365061BD3AAD8541B387F033DC12703 /* TZMPageManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TZMPageManager.h; sourceTree = "<group>"; };
-		A12DAC1A0898C3005A0FDDF3E68694AD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		615F356A34FC7F70CA5FDE5AC968351D /* ReplaceMe.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ReplaceMe.h; path = TZMOpenLib/Classes/ReplaceMe.h; sourceTree = "<group>"; };
+		7B5B3F1A1F3D42E846E6E7769AFB0010 /* TZMPushManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TZMPushManager.h; path = TZMOpenLib/Classes/Manager/TZMPushManager.h; sourceTree = "<group>"; };
+		7C3FB6AA6451C0FD6CFD8D43E01CFC57 /* TZMOpenLib-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TZMOpenLib-prefix.pch"; sourceTree = "<group>"; };
+		7C84891A19A268186BD8695AD147CF25 /* TZMOpenLib.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TZMOpenLib.xcconfig; sourceTree = "<group>"; };
+		850CA882B7BFB16B94AB56062C6E6C65 /* TZMPageManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TZMPageManager.m; path = TZMOpenLib/Classes/Manager/TZMPageManager.m; sourceTree = "<group>"; };
+		8C0A0BE0CDAEA2504FDFC724D09E3BCB /* TZMOpenLib-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TZMOpenLib-umbrella.h"; sourceTree = "<group>"; };
+		8F5CDB9BF04C31AF27FC24639E3C7F9B /* Pods_TZMOpenLib_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TZMOpenLib_Example.framework; path = "Pods-TZMOpenLib_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		92BB008AE5B565A738EC6098A9046E37 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Photos.framework; sourceTree = DEVELOPER_DIR; };
+		A126FBC1C7B4619C1B607D0370890B81 /* TZMOpenLib-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TZMOpenLib-dummy.m"; sourceTree = "<group>"; };
 		A450C998518BC2F482D572F8432F5F31 /* Pods-TZMOpenLib_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TZMOpenLib_Example.modulemap"; sourceTree = "<group>"; };
 		A978C90A6FE836734AF786DCF26B1D21 /* Pods-TZMOpenLib_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TZMOpenLib_Tests-umbrella.h"; sourceTree = "<group>"; };
 		ABED425AABFA3CABE12EAC344DC7AE12 /* Pods-TZMOpenLib_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TZMOpenLib_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		ACB5451B25C977FE45FD25EF6E1E4B6C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		B36AB396275697EEE1A5B13BA8A38FE3 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BAA9D3D0E3C908A69ABAD3A4B6CA0682 /* TZMOpenLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TZMOpenLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C891A7E0E90B4165A8BEF2D26A645527 /* TZMOpenLib.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = TZMOpenLib.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B36AB396275697EEE1A5B13BA8A38FE3 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B476FE8E79FF90129391D9DF1857EA94 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		BAA9D3D0E3C908A69ABAD3A4B6CA0682 /* TZMOpenLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TZMOpenLib.framework; path = TZMOpenLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4BF86C3D5AB357CA00E781356CF6E50 /* TZMImagePickerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TZMImagePickerController.h; path = TZMOpenLib/Classes/Manager/TZMImagePickerController.h; sourceTree = "<group>"; };
+		C941529ED217628D5A9E2D08DC08D3F9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		CA867C7668BD2CF8F4485E80CDF9BC4A /* Pods-TZMOpenLib_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TZMOpenLib_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D1AA51D8D40A69F1FED49E6AE8F1F05E /* TZMOpenLib.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = TZMOpenLib.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D1BC91A1DCF654CF51074F7AF37AF26B /* Pods-TZMOpenLib_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TZMOpenLib_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		DF2A147516FC3E9D5B61565E16B5BD9A /* TZMOpenLib.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TZMOpenLib.xcconfig; sourceTree = "<group>"; };
-		E40A5DF9F0BD9C506B8D72152E228A32 /* TZMOpenLib-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TZMOpenLib-dummy.m"; sourceTree = "<group>"; };
 		EF3CF6E55DF76885A6C9ED71E7AC9FF3 /* Pods-TZMOpenLib_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TZMOpenLib_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		F1794238C821F8E40D101BFE3405256A /* Pods-TZMOpenLib_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TZMOpenLib_Example-Info.plist"; sourceTree = "<group>"; };
+		F2489AC1A12A8CCE5447E78398B5FA7E /* TZMPhotoLibraryManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TZMPhotoLibraryManager.m; path = TZMOpenLib/Classes/Manager/TZMPhotoLibraryManager.m; sourceTree = "<group>"; };
 		F48A9AE48EFABB11C907A20D452B5E90 /* Pods-TZMOpenLib_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TZMOpenLib_Tests.modulemap"; sourceTree = "<group>"; };
-		FE83AF733777035BE66321BF3A8711FA /* TZMOpenLib-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TZMOpenLib-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,12 +112,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		81880AA6315A1447E14809A7986B5EFD /* Frameworks */ = {
+		B0EE09313A4BFB33DDB854CE6E6C2102 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CA1B4E90355F3128FE35D1271D31EE6 /* Foundation.framework in Frameworks */,
-				CDCA8811605673718B7651F3187E8D95 /* UIKit.framework in Frameworks */,
+				F09DD270A358AC31A43778764F3D444E /* Foundation.framework in Frameworks */,
+				A7A3ADA407556140DA9594A34E217BBD /* Photos.framework in Frameworks */,
+				ECABABB68BB755AC81C5B850FE91AD41 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,15 +140,6 @@
 			);
 			name = "Pods-TZMOpenLib_Example";
 			path = "Target Support Files/Pods-TZMOpenLib_Example";
-			sourceTree = "<group>";
-		};
-		06CDD10DE71306278CF89108B3036DFD /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				2EFB40531CB700ADF867FEEE78561E78 /* Foundation.framework */,
-				74E404AA6957590324067E330E0EC533 /* UIKit.framework */,
-			);
-			name = iOS;
 			sourceTree = "<group>";
 		};
 		0DC7BD80191D2441A3652BC569EDD774 /* Pods-TZMOpenLib_Tests */ = {
@@ -158,6 +168,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				67797ECC20E679733DBFDF33D2B040E6 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		37EE23C4D7E0D827904C9BEB585FA78D /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,26 +185,24 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+		67797ECC20E679733DBFDF33D2B040E6 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				06CDD10DE71306278CF89108B3036DFD /* iOS */,
+				C941529ED217628D5A9E2D08DC08D3F9 /* Foundation.framework */,
+				92BB008AE5B565A738EC6098A9046E37 /* Photos.framework */,
+				B476FE8E79FF90129391D9DF1857EA94 /* UIKit.framework */,
 			);
-			name = Frameworks;
+			name = iOS;
 			sourceTree = "<group>";
 		};
-		7C50666D76C234DF4DCAABBD3ABE6FC7 /* Support Files */ = {
+		69CFEE256BCDEFCEAF9C5017A61107E7 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				62B56B436F3CD886C3BEBD031F3DC701 /* TZMOpenLib.modulemap */,
-				DF2A147516FC3E9D5B61565E16B5BD9A /* TZMOpenLib.xcconfig */,
-				E40A5DF9F0BD9C506B8D72152E228A32 /* TZMOpenLib-dummy.m */,
-				3143040567DA30974409736A5969E854 /* TZMOpenLib-Info.plist */,
-				46C0C8A3F6A384626D770AC403333C90 /* TZMOpenLib-prefix.pch */,
-				FE83AF733777035BE66321BF3A8711FA /* TZMOpenLib-umbrella.h */,
+				20BCB758D556CFC44C2ADD742C93AA77 /* LICENSE */,
+				16D9694063AE648405ED800930A428F8 /* README.md */,
+				D1AA51D8D40A69F1FED49E6AE8F1F05E /* TZMOpenLib.podspec */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/TZMOpenLib";
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -194,70 +210,71 @@
 			children = (
 				B36AB396275697EEE1A5B13BA8A38FE3 /* Podfile */,
 				CD8BBBF3DA2BD074919FCFE1B60A85C0 /* Development Pods */,
-				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
 				10CFA8F79B83F56253D274D3E21F59E4 /* Products */,
 				37EE23C4D7E0D827904C9BEB585FA78D /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		C9A88D500F8352FB911507CEDD7FD1D8 /* Manager */ = {
+		B86617DA0FEDD79A421F39EBE35722FF /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				9365061BD3AAD8541B387F033DC12703 /* TZMPageManager.h */,
-				2BCF7E09C844EC5A51C373B940BE147E /* TZMPageManager.m */,
+				0B4CCDB8B8BEB59F73EFB510EC818B2E /* TZMAlertManager.h */,
+				3CF53D089E4C31B52EDC88A53BA7F7D2 /* TZMAlertManager.m */,
+				C4BF86C3D5AB357CA00E781356CF6E50 /* TZMImagePickerController.h */,
+				25E316AFBAB67F007E253C2DE7C4E469 /* TZMImagePickerController.m */,
+				2D4E7597CB65B5BEE67BBC0642532E38 /* TZMPageManager.h */,
+				850CA882B7BFB16B94AB56062C6E6C65 /* TZMPageManager.m */,
+				3D78B2ED4CC1B5DED474C73BEA0EB94A /* TZMPhotoLibraryManager.h */,
+				F2489AC1A12A8CCE5447E78398B5FA7E /* TZMPhotoLibraryManager.m */,
+				7B5B3F1A1F3D42E846E6E7769AFB0010 /* TZMPushManager.h */,
+				2AEFE5C563B3C65980AC06874EEB358C /* TZMPushManager.m */,
 			);
 			name = Manager;
-			path = TZMOpenLib/Classes/Manager;
 			sourceTree = "<group>";
 		};
 		CD8BBBF3DA2BD074919FCFE1B60A85C0 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E75159859B135A74C924806559895487 /* TZMOpenLib */,
+				D0F5E13EF89F5745E2AF4736E683A94B /* TZMOpenLib */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		DAC0A03FF49F8392C8BF98A9E04ACECF /* Pod */ = {
+		D0F5E13EF89F5745E2AF4736E683A94B /* TZMOpenLib */ = {
 			isa = PBXGroup;
 			children = (
-				A12DAC1A0898C3005A0FDDF3E68694AD /* LICENSE */,
-				ACB5451B25C977FE45FD25EF6E1E4B6C /* README.md */,
-				C891A7E0E90B4165A8BEF2D26A645527 /* TZMOpenLib.podspec */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		E75159859B135A74C924806559895487 /* TZMOpenLib */ = {
-			isa = PBXGroup;
-			children = (
-				20CC2FD7222FD40B0095FA79 /* ReplaceMe.h */,
-				C9A88D500F8352FB911507CEDD7FD1D8 /* Manager */,
-				DAC0A03FF49F8392C8BF98A9E04ACECF /* Pod */,
-				7C50666D76C234DF4DCAABBD3ABE6FC7 /* Support Files */,
+				615F356A34FC7F70CA5FDE5AC968351D /* ReplaceMe.h */,
+				B86617DA0FEDD79A421F39EBE35722FF /* Manager */,
+				69CFEE256BCDEFCEAF9C5017A61107E7 /* Pod */,
+				E535F7A7A0325C604CD3CBD0F34CD4E9 /* Support Files */,
 			);
 			name = TZMOpenLib;
 			path = ../..;
 			sourceTree = "<group>";
 		};
+		E535F7A7A0325C604CD3CBD0F34CD4E9 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				21EBD752CEAA25B6976ED504F5DDE94E /* TZMOpenLib.modulemap */,
+				7C84891A19A268186BD8695AD147CF25 /* TZMOpenLib.xcconfig */,
+				A126FBC1C7B4619C1B607D0370890B81 /* TZMOpenLib-dummy.m */,
+				300127201D75ACA05DCA7D99BB5757ED /* TZMOpenLib-Info.plist */,
+				7C3FB6AA6451C0FD6CFD8D43E01CFC57 /* TZMOpenLib-prefix.pch */,
+				8C0A0BE0CDAEA2504FDFC724D09E3BCB /* TZMOpenLib-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/TZMOpenLib";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0EEAB62D8A82FCC1A75369DD190D5465 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BC239E67660F73C6D3CDD16B5C5987B7 /* TZMOpenLib-umbrella.h in Headers */,
-				8CAC522405940446A7E939CB56D45AEE /* TZMPageManager.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		7D324D7A9E62D282AEB9BAB82F333BCB /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				AEE352B746A41970AEB8D43A51811CCF /* Pods-TZMOpenLib_Example-umbrella.h in Headers */,
-				20CC2FD8222FD40B0095FA79 /* ReplaceMe.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +283,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DA2934304F4156921BE752E7960DC9E /* Pods-TZMOpenLib_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8EF52C69856CB09030E25990EDD0839 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A95B19D12E8E687E66A588E494C7C5E /* ReplaceMe.h in Headers */,
+				49A56AF868B57F8A9FB84575F9E862AE /* TZMAlertManager.h in Headers */,
+				E6CF2B94B0796CF00EAB16F615CA51DA /* TZMImagePickerController.h in Headers */,
+				38B09E6064EBD84117F3AA2918315678 /* TZMOpenLib-umbrella.h in Headers */,
+				38017CCB74714AC016F2CB999B076981 /* TZMPageManager.h in Headers */,
+				F08AE66F16EBFED67D1EE61E80693998 /* TZMPhotoLibraryManager.h in Headers */,
+				B46B57AF5E70D806459053ED4901B87C /* TZMPushManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,9 +345,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 48C078E2DEDACA5136D89810F85E84DB /* Build configuration list for PBXNativeTarget "TZMOpenLib" */;
 			buildPhases = (
-				0EEAB62D8A82FCC1A75369DD190D5465 /* Headers */,
-				5109CBA59513F959EAA38D1AA5DCD59A /* Sources */,
-				81880AA6315A1447E14809A7986B5EFD /* Frameworks */,
+				F8EF52C69856CB09030E25990EDD0839 /* Headers */,
+				CF89DD78580DE81FB86CA88D341B4F18 /* Sources */,
+				B0EE09313A4BFB33DDB854CE6E6C2102 /* Frameworks */,
 				4341C60031A00FB2BFB7DD4910B965B6 /* Resources */,
 			);
 			buildRules = (
@@ -381,15 +412,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5109CBA59513F959EAA38D1AA5DCD59A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8E1A4EC7C98E5D9703E22051267F8364 /* TZMOpenLib-dummy.m in Sources */,
-				C30C1AFE90B221EEFF00BF5714482F73 /* TZMPageManager.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		6F7E16D5C530956CA2B091CCF55F94BD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -403,6 +425,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				A86EE282121F2FBE058B3FEA24C6C77E /* Pods-TZMOpenLib_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF89DD78580DE81FB86CA88D341B4F18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B86B9454F41B5D10E31DEA27ADE8812 /* TZMAlertManager.m in Sources */,
+				BFD4D40FFAA59311D657B1C4FE920CF3 /* TZMImagePickerController.m in Sources */,
+				84D40C4BAA9DBDA4C8F6369831662D5C /* TZMOpenLib-dummy.m in Sources */,
+				87F08C0E9363DACDC370660789F738E0 /* TZMPageManager.m in Sources */,
+				A33DAD01A83472E51D54955AE9FD9EF4 /* TZMPhotoLibraryManager.m in Sources */,
+				73AC85174F1DA30E8F3C3F44DCCD4F7F /* TZMPushManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,7 +461,7 @@
 /* Begin XCBuildConfiguration section */
 		42AF12B3F2995CB38EB334285B647939 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DF2A147516FC3E9D5B61565E16B5BD9A /* TZMOpenLib.xcconfig */;
+			baseConfigurationReference = 7C84891A19A268186BD8695AD147CF25 /* TZMOpenLib.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -457,7 +492,7 @@
 		};
 		AC05A07C8C5E24C63D8E466847D0ADE0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DF2A147516FC3E9D5B61565E16B5BD9A /* TZMOpenLib.xcconfig */;
+			baseConfigurationReference = 7C84891A19A268186BD8695AD147CF25 /* TZMOpenLib.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -538,7 +573,8 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};

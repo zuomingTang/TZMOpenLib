@@ -1,5 +1,7 @@
 PODS:
-  - TZMOpenLib (0.1.0)
+  - TZMOpenLib (0.4.0):
+    - TZMOpenLib/Manager (= 0.4.0)
+  - TZMOpenLib/Manager (0.4.0)
 
 DEPENDENCIES:
   - TZMOpenLib (from `../`)
@@ -9,7 +11,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  TZMOpenLib: 799704707eaa7b980a25eb1d5c70394aae999bac
+  TZMOpenLib: ffa04e4ed04b379309c4e6ce70df98bd6d721c4f
 
 PODFILE CHECKSUM: 4ecdde9d1ec28a048001881323810f4ea9dfe1e8
 

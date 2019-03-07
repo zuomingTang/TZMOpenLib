@@ -8,13 +8,13 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TZMOpenLib'
-  s.version          = '0.3.0'
+  s.version          = '0.4.0'
   s.summary          = 'TZMOpenLib'
   
   s.subspec 'Manager' do |cs|
       cs.source_files = 'TZMOpenLib/Classes/Manager/**/*'
       cs.public_header_files = 'TZMOpenLib/Classes/Manager/**/*.h'
-      cs.frameworks = 'UIKit', 'Foundation'
+      cs.frameworks = 'UIKit', 'Foundation', 'Photos'
       # s.dependency 'AFNetworking', '~> 2.3'
   end
 
@@ -32,7 +32,7 @@ TODO: TZMOpenLib.
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'zuomingTang' => '414933949@qq.com' }
-  s.source           = { :git => 'https://github.com/zuomingTang/TZMOpenLib.git', :tag => '0.3.0' }
+  s.source           = { :git => 'https://github.com/zuomingTang/TZMOpenLib.git', :tag => '0.4.0' }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
   s.ios.deployment_target = '8.0'
   

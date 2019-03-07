@@ -10,7 +10,12 @@
 #endif
 #endif
 
+#import "ReplaceMe.h"
+#import "TZMAlertManager.h"
+#import "TZMImagePickerController.h"
 #import "TZMPageManager.h"
+#import "TZMPhotoLibraryManager.h"
+#import "TZMPushManager.h"
 
 FOUNDATION_EXPORT double TZMOpenLibVersionNumber;
 FOUNDATION_EXPORT const unsigned char TZMOpenLibVersionString[];
