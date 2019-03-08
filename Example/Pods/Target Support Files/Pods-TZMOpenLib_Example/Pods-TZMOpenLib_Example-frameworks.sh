@@ -154,13 +154,11 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/ObjcAssociatedObjectHelpers/ObjcAssociatedObjectHelpers.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/TZMOpenLib/TZMOpenLib.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/YYCategories/YYCategories.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/ObjcAssociatedObjectHelpers/ObjcAssociatedObjectHelpers.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/TZMOpenLib/TZMOpenLib.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/YYCategories/YYCategories.framework"
 fi

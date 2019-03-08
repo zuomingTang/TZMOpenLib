@@ -307,7 +307,6 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TZMOpenLib_Example/Pods-TZMOpenLib_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ObjcAssociatedObjectHelpers/ObjcAssociatedObjectHelpers.framework",
-				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/TZMOpenLib/TZMOpenLib.framework",
 				"${BUILT_PRODUCTS_DIR}/YYCategories/YYCategories.framework",
 			);
@@ -316,7 +315,6 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjcAssociatedObjectHelpers.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TZMOpenLib.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCategories.framework",
 			);

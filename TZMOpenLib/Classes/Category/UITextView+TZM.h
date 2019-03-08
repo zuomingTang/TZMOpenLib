@@ -9,7 +9,6 @@
 #import <YYCategories/YYCategories.h>
 #import "NSObject+TZM.h"
 #import <ObjcAssociatedObjectHelpers/ObjcAssociatedObjectHelpers.h>
-#import <SVProgressHUD/SVProgressHUD.h>
 
 @interface UITextView (TZM_IB)
 @property (nonatomic,assign) IBInspectable NSInteger tzm_maxLen; //输入最大长度

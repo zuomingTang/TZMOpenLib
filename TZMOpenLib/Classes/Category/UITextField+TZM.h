@@ -5,7 +5,6 @@
 #import <YYCategories/YYCategories.h>
 #import "NSObject+TZM.h"
 #import <ObjcAssociatedObjectHelpers/ObjcAssociatedObjectHelpers.h>
-#import <SVProgressHUD/SVProgressHUD.h>
 
 @interface UITextField (TZM_IB)
 @property (nonatomic) IBInspectable NSString *z_placeholderColor;

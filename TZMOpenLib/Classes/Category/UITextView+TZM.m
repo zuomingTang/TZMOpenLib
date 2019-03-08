@@ -73,7 +73,6 @@ SYNTHESIZE_ASC_OBJ(tzm_placeholderLabel, setTzm_placeholderLabel);
     // 没有高亮选择的字，则对已输入的文字进行字数统计和限制
     if (!selectedRange || [selectedRange isEmpty]){
         if (toBeString.length > maxNumber) {
-            [SVProgressHUD showErrorWithStatus:[[NSString alloc]initWithFormat:@"输入不得超过%d个字",(int)maxNumber]];
             textView.text = [toBeString substringToIndex:maxNumber];
         }
     }
