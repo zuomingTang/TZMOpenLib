@@ -30,6 +30,26 @@
         "Foundation",
         "Photos"
       ]
+    },
+    {
+      "name": "Category",
+      "source_files": "TZMOpenLib/Classes/Category/**/*",
+      "public_header_files": "TZMOpenLib/Classes/Category/**/*.h",
+      "frameworks": [
+        "UIKit",
+        "Foundation"
+      ],
+      "dependencies": {
+        "YYCategories": [
+          "1.0.3"
+        ],
+        "ObjcAssociatedObjectHelpers": [
+          "2.0.1"
+        ],
+        "SVProgressHUD": [
+          "2.0.1"
+        ]
+      }
     }
   ]
 }

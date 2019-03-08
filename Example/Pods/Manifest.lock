@@ -1,17 +1,41 @@
 PODS:
+  - ObjcAssociatedObjectHelpers (2.0.1):
+    - ObjcAssociatedObjectHelpers/Core (= 2.0.1)
+    - "ObjcAssociatedObjectHelpers/NSObject+Dictionary (= 2.0.1)"
+  - ObjcAssociatedObjectHelpers/Core (2.0.1)
+  - "ObjcAssociatedObjectHelpers/NSObject+Dictionary (2.0.1)":
+    - ObjcAssociatedObjectHelpers/Core
+  - SVProgressHUD (2.0.1)
   - TZMOpenLib (0.4.0):
+    - TZMOpenLib/Category (= 0.4.0)
     - TZMOpenLib/Manager (= 0.4.0)
+  - TZMOpenLib/Category (0.4.0):
+    - ObjcAssociatedObjectHelpers (= 2.0.1)
+    - SVProgressHUD (= 2.0.1)
+    - YYCategories (= 1.0.3)
   - TZMOpenLib/Manager (0.4.0)
+  - YYCategories (1.0.3):
+    - YYCategories/no-arc (= 1.0.3)
+  - YYCategories/no-arc (1.0.3)
 
 DEPENDENCIES:
   - TZMOpenLib (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - ObjcAssociatedObjectHelpers
+    - SVProgressHUD
+    - YYCategories
 
 EXTERNAL SOURCES:
   TZMOpenLib:
     :path: "../"
 
 SPEC CHECKSUMS:
-  TZMOpenLib: ffa04e4ed04b379309c4e6ce70df98bd6d721c4f
+  ObjcAssociatedObjectHelpers: 686c291f292c26a49b9b1fa7d58130a8d35d59d2
+  SVProgressHUD: cfcb7410d2d93ebb6833d3ec5ab25d4861922fd5
+  TZMOpenLib: c4c56fb918cb03806e684309bf0e360cad41c712
+  YYCategories: 0fd4d9eb0994d8d0e355beb4081c8f7202a82b7b
 
 PODFILE CHECKSUM: 4ecdde9d1ec28a048001881323810f4ea9dfe1e8
 
