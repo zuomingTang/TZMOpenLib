@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TZMOpenLib'
-  s.version          = '0.4.2'
+  s.version          = '0.4.3'
   s.summary          = 'TZMOpenLib'
   
   s.subspec 'Manager' do |cs|
@@ -25,6 +25,16 @@ Pod::Spec.new do |s|
       sc.dependency 'YYCategories', '1.0.3'
       sc.dependency 'ObjcAssociatedObjectHelpers', '2.0.1'
   end
+  
+  s.subspec 'StatusView' do |ss|
+      ss.source_files = 'TZMOpenLib/Classes/StatusView/**/*'
+      ss.public_header_files = 'TZMOpenLib/Classes/StatusView/**/*.h'
+      ss.resource_bundles = {
+        'StatusView' => ['TZMOpenLib/Assets/StatusView/*']
+      }
+      ss.frameworks = 'UIKit', 'Foundation'
+      ss.dependency 'Masonry', '1.1.0'
+  end
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -40,7 +50,7 @@ TODO: TZMOpenLib.
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'zuomingTang' => '414933949@qq.com' }
-  s.source           = { :git => 'https://github.com/zuomingTang/TZMOpenLib.git', :tag => '0.4.2' }
+  s.source           = { :git => 'https://github.com/zuomingTang/TZMOpenLib.git', :tag => '0.4.3' }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
   s.ios.deployment_target = '8.0'
   

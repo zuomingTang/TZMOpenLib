@@ -29,6 +29,9 @@
 #import "TZMPageManager.h"
 #import "TZMPhotoLibraryManager.h"
 #import "TZMPushManager.h"
+#import "TZMPageStatusView.h"
+#import "UIView+TZMPageStatusViewEx.h"
+#import "UIViewController+TZMPageStatusViewEx.h"
 
 FOUNDATION_EXPORT double TZMOpenLibVersionNumber;
 FOUNDATION_EXPORT const unsigned char TZMOpenLibVersionString[];

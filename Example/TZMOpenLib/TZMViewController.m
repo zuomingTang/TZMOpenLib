@@ -7,6 +7,7 @@
 //
 
 #import "TZMViewController.h"
+#import "UIViewController+TZMPageStatusViewEx.h"
 
 @interface TZMViewController ()
 
@@ -17,6 +18,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self showPageStatus:TZMPageStatusNormal image:nil title:@"title" desc:@"desc" buttonText:@"button" didClickButtonCallback:^(TZMPageStatus status) {
+
+    }];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 

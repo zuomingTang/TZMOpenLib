@@ -1,6 +1,6 @@
 {
   "name": "TZMOpenLib",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "summary": "TZMOpenLib",
   "description": "TODO: TZMOpenLib.",
   "homepage": "https://github.com/zuomingTang/TZMOpenLib",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/zuomingTang/TZMOpenLib.git",
-    "tag": "0.4.2"
+    "tag": "0.4.3"
   },
   "platforms": {
     "ios": "8.0"
@@ -45,6 +45,25 @@
         ],
         "ObjcAssociatedObjectHelpers": [
           "2.0.1"
+        ]
+      }
+    },
+    {
+      "name": "StatusView",
+      "source_files": "TZMOpenLib/Classes/StatusView/**/*",
+      "public_header_files": "TZMOpenLib/Classes/StatusView/**/*.h",
+      "resource_bundles": {
+        "StatusView": [
+          "TZMOpenLib/Assets/StatusView/*"
+        ]
+      },
+      "frameworks": [
+        "UIKit",
+        "Foundation"
+      ],
+      "dependencies": {
+        "Masonry": [
+          "1.1.0"
         ]
       }
     }

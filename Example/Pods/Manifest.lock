@@ -1,17 +1,21 @@
 PODS:
+  - Masonry (1.1.0)
   - ObjcAssociatedObjectHelpers (2.0.1):
     - ObjcAssociatedObjectHelpers/Core (= 2.0.1)
     - "ObjcAssociatedObjectHelpers/NSObject+Dictionary (= 2.0.1)"
   - ObjcAssociatedObjectHelpers/Core (2.0.1)
   - "ObjcAssociatedObjectHelpers/NSObject+Dictionary (2.0.1)":
     - ObjcAssociatedObjectHelpers/Core
-  - TZMOpenLib (0.4.2):
-    - TZMOpenLib/Category (= 0.4.2)
-    - TZMOpenLib/Manager (= 0.4.2)
-  - TZMOpenLib/Category (0.4.2):
+  - TZMOpenLib (0.4.3):
+    - TZMOpenLib/Category (= 0.4.3)
+    - TZMOpenLib/Manager (= 0.4.3)
+    - TZMOpenLib/StatusView (= 0.4.3)
+  - TZMOpenLib/Category (0.4.3):
     - ObjcAssociatedObjectHelpers (= 2.0.1)
     - YYCategories (= 1.0.3)
-  - TZMOpenLib/Manager (0.4.2)
+  - TZMOpenLib/Manager (0.4.3)
+  - TZMOpenLib/StatusView (0.4.3):
+    - Masonry (= 1.1.0)
   - YYCategories (1.0.3):
     - YYCategories/no-arc (= 1.0.3)
   - YYCategories/no-arc (1.0.3)
@@ -21,6 +25,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Masonry
     - ObjcAssociatedObjectHelpers
     - YYCategories
 
@@ -29,8 +34,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   ObjcAssociatedObjectHelpers: 686c291f292c26a49b9b1fa7d58130a8d35d59d2
-  TZMOpenLib: a289b3d284d39446688fdb346521dd9fb8d4ff91
+  TZMOpenLib: 1cd5d6ed2831bd0bec0924936cea7f22e79ae8d3
   YYCategories: 0fd4d9eb0994d8d0e355beb4081c8f7202a82b7b
 
 PODFILE CHECKSUM: 4ecdde9d1ec28a048001881323810f4ea9dfe1e8
