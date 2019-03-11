@@ -66,6 +66,23 @@
           "1.1.0"
         ]
       }
+    },
+    {
+      "name": "RefreshAndLoadMore",
+      "source_files": "TZMOpenLib/Classes/RefreshAndLoadMore/**/*",
+      "public_header_files": "TZMOpenLib/Classes/RefreshAndLoadMore/**/*.h",
+      "frameworks": [
+        "UIKit",
+        "Foundation"
+      ],
+      "dependencies": {
+        "YYCategories": [
+          "1.0.3"
+        ],
+        "ObjcAssociatedObjectHelpers": [
+          "2.0.1"
+        ]
+      }
     }
   ]
 }
