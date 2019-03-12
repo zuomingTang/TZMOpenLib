@@ -35,6 +35,11 @@
 #import "TZMPageStatusView.h"
 #import "UIView+TZMPageStatusViewEx.h"
 #import "UIViewController+TZMPageStatusViewEx.h"
+#import "TZMButton.h"
+#import "TZMCollectionView.h"
+#import "TZMCountDownButton.h"
+#import "TZMRefreshView.h"
+#import "TZMTabBar.h"
 #import "TZMBlanketVC.h"
 
 FOUNDATION_EXPORT double TZMOpenLibVersionNumber;

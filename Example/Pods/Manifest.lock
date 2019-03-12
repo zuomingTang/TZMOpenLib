@@ -6,23 +6,27 @@ PODS:
   - ObjcAssociatedObjectHelpers/Core (2.0.1)
   - "ObjcAssociatedObjectHelpers/NSObject+Dictionary (2.0.1)":
     - ObjcAssociatedObjectHelpers/Core
-  - TZMOpenLib (0.4.4):
-    - TZMOpenLib/Category (= 0.4.4)
-    - TZMOpenLib/Manager (= 0.4.4)
-    - TZMOpenLib/RefreshAndLoadMore (= 0.4.4)
-    - TZMOpenLib/StatusView (= 0.4.4)
-    - TZMOpenLib/ViewController (= 0.4.4)
-  - TZMOpenLib/Category (0.4.4):
+  - TZMOpenLib (0.4.5):
+    - TZMOpenLib/Category (= 0.4.5)
+    - TZMOpenLib/Manager (= 0.4.5)
+    - TZMOpenLib/RefreshAndLoadMore (= 0.4.5)
+    - TZMOpenLib/StatusView (= 0.4.5)
+    - TZMOpenLib/View (= 0.4.5)
+    - TZMOpenLib/ViewController (= 0.4.5)
+  - TZMOpenLib/Category (0.4.5):
     - ObjcAssociatedObjectHelpers (= 2.0.1)
     - YYCategories (= 1.0.3)
-  - TZMOpenLib/Manager (0.4.4)
-  - TZMOpenLib/RefreshAndLoadMore (0.4.4):
+  - TZMOpenLib/Manager (0.4.5)
+  - TZMOpenLib/RefreshAndLoadMore (0.4.5):
     - ObjcAssociatedObjectHelpers (= 2.0.1)
     - YYCategories (= 1.0.3)
-  - TZMOpenLib/StatusView (0.4.4):
+  - TZMOpenLib/StatusView (0.4.5):
     - Masonry (= 1.1.0)
-  - TZMOpenLib/ViewController (0.4.4):
+  - TZMOpenLib/View (0.4.5):
+    - XXNibBridge (= 2.3.1)
+  - TZMOpenLib/ViewController (0.4.5):
     - Masonry (= 1.1.0)
+  - XXNibBridge (2.3.1)
   - YYCategories (1.0.3):
     - YYCategories/no-arc (= 1.0.3)
   - YYCategories/no-arc (1.0.3)
@@ -34,6 +38,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Masonry
     - ObjcAssociatedObjectHelpers
+    - XXNibBridge
     - YYCategories
 
 EXTERNAL SOURCES:
@@ -43,7 +48,8 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   ObjcAssociatedObjectHelpers: 686c291f292c26a49b9b1fa7d58130a8d35d59d2
-  TZMOpenLib: 9224fb04ec2af758882ae6cffd3fbccb8ea0f46a
+  TZMOpenLib: 21a7aef9aef145a02e2a7614ff928302b47fbe45
+  XXNibBridge: addb780e6db076eb2c61716aa60b176a6799b80f
   YYCategories: 0fd4d9eb0994d8d0e355beb4081c8f7202a82b7b
 
 PODFILE CHECKSUM: 4ecdde9d1ec28a048001881323810f4ea9dfe1e8

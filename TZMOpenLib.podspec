@@ -11,10 +11,10 @@ Pod::Spec.new do |s|
   s.version          = '0.4.5'
   s.summary          = 'TZMOpenLib'
   
-  s.subspec 'Manager' do |cs|
-      cs.source_files = 'TZMOpenLib/Classes/Manager/**/*'
-      cs.public_header_files = 'TZMOpenLib/Classes/Manager/**/*.h'
-      cs.frameworks = 'UIKit', 'Foundation', 'Photos'
+  s.subspec 'Manager' do |sm|
+      sm.source_files = 'TZMOpenLib/Classes/Manager/**/*'
+      sm.public_header_files = 'TZMOpenLib/Classes/Manager/**/*.h'
+      sm.frameworks = 'UIKit', 'Foundation', 'Photos'
       # s.dependency 'AFNetworking', '~> 2.3'
   end
   
@@ -50,6 +50,17 @@ Pod::Spec.new do |s|
       svc.frameworks = 'UIKit'
       svc.dependency 'Masonry', '1.1.0'
   end
+  
+  s.subspec 'View' do |sv|
+      sv.source_files = 'TZMOpenLib/Classes/View/**/*'
+      sv.public_header_files = 'TZMOpenLib/Classes/View/**/*.h'
+      sv.resource_bundles = {
+          'View' => ['TZMOpenLib/Assets/View/*']
+      }
+      sv.frameworks = 'UIKit'
+      sv.dependency 'XXNibBridge', '2.3.1'
+  end
+
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?

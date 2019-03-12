@@ -309,6 +309,7 @@
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjcAssociatedObjectHelpers/ObjcAssociatedObjectHelpers.framework",
 				"${BUILT_PRODUCTS_DIR}/TZMOpenLib/TZMOpenLib.framework",
+				"${BUILT_PRODUCTS_DIR}/XXNibBridge/XXNibBridge.framework",
 				"${BUILT_PRODUCTS_DIR}/YYCategories/YYCategories.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -318,6 +319,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjcAssociatedObjectHelpers.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TZMOpenLib.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XXNibBridge.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCategories.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

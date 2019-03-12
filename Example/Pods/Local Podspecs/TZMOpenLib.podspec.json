@@ -1,6 +1,6 @@
 {
   "name": "TZMOpenLib",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "summary": "TZMOpenLib",
   "description": "TODO: TZMOpenLib.",
   "homepage": "https://github.com/zuomingTang/TZMOpenLib",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/zuomingTang/TZMOpenLib.git",
-    "tag": "0.4.4"
+    "tag": "0.4.5"
   },
   "platforms": {
     "ios": "8.0"
@@ -92,6 +92,22 @@
       "dependencies": {
         "Masonry": [
           "1.1.0"
+        ]
+      }
+    },
+    {
+      "name": "View",
+      "source_files": "TZMOpenLib/Classes/View/**/*",
+      "public_header_files": "TZMOpenLib/Classes/View/**/*.h",
+      "resource_bundles": {
+        "View": [
+          "TZMOpenLib/Assets/View/*"
+        ]
+      },
+      "frameworks": "UIKit",
+      "dependencies": {
+        "XXNibBridge": [
+          "2.3.1"
         ]
       }
     }

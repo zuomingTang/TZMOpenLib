@@ -6,7 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Masonry.h"
+#import <Masonry/Masonry.h>
 
 // 用子类继承该类，可以获得独立显示在一个 Window 的能力
 // 所有继承自该类的 VC 调用 show 都将共用一个队列用来显示自己，后调用的会显示在屏幕上
