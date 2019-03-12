@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TZMOpenLib'
-  s.version          = '0.4.4'
+  s.version          = '0.4.5'
   s.summary          = 'TZMOpenLib'
   
   s.subspec 'Manager' do |cs|
@@ -43,6 +43,13 @@ Pod::Spec.new do |s|
       sr.dependency 'YYCategories', '1.0.3'
       sr.dependency 'ObjcAssociatedObjectHelpers', '2.0.1'
   end
+  
+  s.subspec 'ViewController' do |svc|
+      svc.source_files = 'TZMOpenLib/Classes/ViewController/**/*'
+      svc.public_header_files = 'TZMOpenLib/Classes/ViewController/**/*.h'
+      svc.frameworks = 'UIKit'
+      svc.dependency 'Masonry', '1.1.0'
+  end
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -58,7 +65,7 @@ TODO: TZMOpenLib.
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'zuomingTang' => '414933949@qq.com' }
-  s.source           = { :git => 'https://github.com/zuomingTang/TZMOpenLib.git', :tag => '0.4.4' }
+  s.source           = { :git => 'https://github.com/zuomingTang/TZMOpenLib.git', :tag => '0.4.5' }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
   s.ios.deployment_target = '8.0'
   

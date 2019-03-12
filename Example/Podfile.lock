@@ -6,19 +6,22 @@ PODS:
   - ObjcAssociatedObjectHelpers/Core (2.0.1)
   - "ObjcAssociatedObjectHelpers/NSObject+Dictionary (2.0.1)":
     - ObjcAssociatedObjectHelpers/Core
-  - TZMOpenLib (0.4.3):
-    - TZMOpenLib/Category (= 0.4.3)
-    - TZMOpenLib/Manager (= 0.4.3)
-    - TZMOpenLib/RefreshAndLoadMore (= 0.4.3)
-    - TZMOpenLib/StatusView (= 0.4.3)
-  - TZMOpenLib/Category (0.4.3):
+  - TZMOpenLib (0.4.4):
+    - TZMOpenLib/Category (= 0.4.4)
+    - TZMOpenLib/Manager (= 0.4.4)
+    - TZMOpenLib/RefreshAndLoadMore (= 0.4.4)
+    - TZMOpenLib/StatusView (= 0.4.4)
+    - TZMOpenLib/ViewController (= 0.4.4)
+  - TZMOpenLib/Category (0.4.4):
     - ObjcAssociatedObjectHelpers (= 2.0.1)
     - YYCategories (= 1.0.3)
-  - TZMOpenLib/Manager (0.4.3)
-  - TZMOpenLib/RefreshAndLoadMore (0.4.3):
+  - TZMOpenLib/Manager (0.4.4)
+  - TZMOpenLib/RefreshAndLoadMore (0.4.4):
     - ObjcAssociatedObjectHelpers (= 2.0.1)
     - YYCategories (= 1.0.3)
-  - TZMOpenLib/StatusView (0.4.3):
+  - TZMOpenLib/StatusView (0.4.4):
+    - Masonry (= 1.1.0)
+  - TZMOpenLib/ViewController (0.4.4):
     - Masonry (= 1.1.0)
   - YYCategories (1.0.3):
     - YYCategories/no-arc (= 1.0.3)
@@ -40,7 +43,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   ObjcAssociatedObjectHelpers: 686c291f292c26a49b9b1fa7d58130a8d35d59d2
-  TZMOpenLib: 213557dea4217e65da3eea6ce9847563b7c2c07b
+  TZMOpenLib: 9224fb04ec2af758882ae6cffd3fbccb8ea0f46a
   YYCategories: 0fd4d9eb0994d8d0e355beb4081c8f7202a82b7b
 
 PODFILE CHECKSUM: 4ecdde9d1ec28a048001881323810f4ea9dfe1e8

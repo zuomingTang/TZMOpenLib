@@ -31,10 +31,11 @@
 #import "TZMPushManager.h"
 #import "TZMLoadMoreRefreshControl.h"
 #import "TZMPullToRefresh.h"
-#import "UIScrollView+TZM.h"
+#import "UIScrollView+TZMRefreshAndLoadMore.h"
 #import "TZMPageStatusView.h"
 #import "UIView+TZMPageStatusViewEx.h"
 #import "UIViewController+TZMPageStatusViewEx.h"
+#import "TZMBlanketVC.h"
 
 FOUNDATION_EXPORT double TZMOpenLibVersionNumber;
 FOUNDATION_EXPORT const unsigned char TZMOpenLibVersionString[];
