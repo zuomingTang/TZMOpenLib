@@ -40,4 +40,17 @@
     [self.aiView startAnimating];
 }
 
++ (id)xx_instantiateFromNibInBundle:(NSBundle *)bundle owner:(id)owner {
+    bundle = [NSBundle bundleForClass:[TZMRefreshView class]];
+    bundle = [NSBundle bundleWithURL:[bundle URLForResource:@"View" withExtension:@"bundle"]];
+    NSArray *views = [bundle loadNibNamed:@"TZMRefreshView" owner:nil options:nil];
+    for (UIView *view in views) {
+        if ([view isMemberOfClass:self.class]) {
+            return view;
+        }
+    }
+    NSAssert(NO, @"Expect file: %@", [NSString stringWithFormat:@"%@.xib", self.nibid]);
+    return nil;
+}
+
 @end
