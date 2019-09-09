@@ -33,7 +33,6 @@ Pod::Spec.new do |s|
         'StatusView' => ['TZMOpenLib/Assets/StatusView/*']
       }
       ss.frameworks = 'UIKit', 'Foundation'
-      ss.dependency 'Masonry', '1.1.0'
   end
   
   s.subspec 'RefreshAndLoadMore' do |sr|
@@ -48,7 +47,6 @@ Pod::Spec.new do |s|
       svc.source_files = 'TZMOpenLib/Classes/ViewController/**/*'
       svc.public_header_files = 'TZMOpenLib/Classes/ViewController/**/*.h'
       svc.frameworks = 'UIKit'
-      svc.dependency 'Masonry', '1.1.0'
   end
   
   s.subspec 'View' do |sv|
