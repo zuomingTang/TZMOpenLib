@@ -6,6 +6,7 @@
 //
 
 #import "TZMBlanketVC.h"
+#import <Masonry/Masonry.h>
 
 @interface TZMBlanketVC ()
 @end

@@ -5,7 +5,6 @@
 
 
 #import <UIKit/UIKit.h>
-#import <Masonry/Masonry.h>
 
 @class TZMPageStatusView;
 

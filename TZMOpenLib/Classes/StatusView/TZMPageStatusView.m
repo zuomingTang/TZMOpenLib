@@ -4,6 +4,7 @@
 //
 
 #import "TZMPageStatusView.h"
+#import <Masonry/Masonry.h>
 
 @interface TZMPageStatusView()
 @end
