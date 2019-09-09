@@ -65,19 +65,14 @@ typedef void (^_TZMViewControllerWillAppearInjectBlock)(UIViewController *viewCo
     if (self.tzm_willAppearInjectBlock) {
         self.tzm_willAppearInjectBlock(self, animated);
     }
+    if (self.tzm_prefersNavigationBarHidden == self.navigationController.navigationBarHidden) {
+        return ;
+    }
+    if ([self.className rangeOfString:@"GSH"].location == NSNotFound) {
+        return;
+    }
     __weak typeof(self)weakSelf = self;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(CGFLOAT_MIN * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        if (weakSelf.tzm_prefersNavigationBarHidden == weakSelf.navigationController.navigationBarHidden) {
-            return ;
-        }
-        if ([weakSelf.className isEqualToString:@"CAMImagePickerCameraViewController"]
-             || [weakSelf.className isEqualToString:@"CAMViewfinderViewController"]
-             || [weakSelf.className isEqualToString:@"CAMPreviewViewController"]
-             || [weakSelf.className isEqualToString:@"UIImagePickerController"]
-             || [weakSelf.className isEqualToString:@"PLPhotoTileViewController"]) {
-            //如果是系统的照相界面则不做处理
-            return;
-        }
         if (weakSelf.tzm_prefersNavigationBarHidden) {
             [weakSelf.navigationController setNavigationBarHidden:YES];
         } else {
