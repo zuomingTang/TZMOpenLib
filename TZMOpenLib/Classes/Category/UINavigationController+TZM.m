@@ -62,14 +62,20 @@ typedef void (^_TZMViewControllerWillAppearInjectBlock)(UIViewController *viewCo
 {
     // Forward to primary implementation.
     [self tzm_viewWillAppear:animated];
-    if ([self.className rangeOfString:@"GSH"].location == NSNotFound) {
+    if ([self.className isEqualToString:@"CAMImagePickerCameraViewController"]
+         || [self.className isEqualToString:@"CAMViewfinderViewController"]
+         || [self.className isEqualToString:@"CAMPreviewViewController"]
+         || [self.className isEqualToString:@"UIImagePickerController"]
+         || [self.className isEqualToString:@"PLPhotoTileViewController"]
+         || [self.className isEqualToString:@"PUPhotoPickerHostViewController"]) {
+        //如果是系统的照相界面则不做处理
         return;
-    }
-    if (self.tzm_willAppearInjectBlock) {
-        self.tzm_willAppearInjectBlock(self, animated);
     }
     if (self.tzm_prefersNavigationBarHidden == self.navigationController.navigationBarHidden) {
         return ;
+    }
+    if (self.tzm_willAppearInjectBlock) {
+        self.tzm_willAppearInjectBlock(self, animated);
     }
     __weak typeof(self)weakSelf = self;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(CGFLOAT_MIN * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
