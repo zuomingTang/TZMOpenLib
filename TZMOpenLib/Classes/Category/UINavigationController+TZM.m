@@ -62,12 +62,7 @@ typedef void (^_TZMViewControllerWillAppearInjectBlock)(UIViewController *viewCo
 {
     // Forward to primary implementation.
     [self tzm_viewWillAppear:animated];
-    if ([self.className isEqualToString:@"CAMImagePickerCameraViewController"]
-         || [self.className isEqualToString:@"CAMViewfinderViewController"]
-         || [self.className isEqualToString:@"CAMPreviewViewController"]
-         || [self.className isEqualToString:@"UIImagePickerController"]
-         || [self.className isEqualToString:@"PLPhotoTileViewController"]
-         || [self.className isEqualToString:@"PUPhotoPickerHostViewController"]) {
+    if ([self.className rangeOfString:@"GSH"].location == NSNotFound) {
         //如果是系统的照相界面则不做处理
         return;
     }
