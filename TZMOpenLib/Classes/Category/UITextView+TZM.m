@@ -58,7 +58,9 @@ SYNTHESIZE_ASC_OBJ(tzm_placeholderLabel, setTzm_placeholderLabel);
         if (notification.object == self){
             UITextView *textView = (UITextView *)notification.object;
             self.tzm_placeholderLabel.hidden = textView.text.length > 0;
-            [self wordLimitWithTextField:textView wordMaxNumber:self.tzm_maxLen];
+            if(self.tzm_maxLen > 0){
+                [self wordLimitWithTextField:textView wordMaxNumber:self.tzm_maxLen];
+            }
         }
     }
 }
