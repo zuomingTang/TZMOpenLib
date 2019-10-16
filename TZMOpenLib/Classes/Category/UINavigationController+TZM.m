@@ -67,9 +67,13 @@ static BOOL(^tzm_viewWillAppearBlock)(void);
 {
     // Forward to primary implementation.
     [self tzm_viewWillAppear:animated];
+    if (!tzm_viewWillAppearBlock) {
+        return;
+    }
     if (!tzm_viewWillAppearBlock()) {
         return;
     }
+    
     if (self.tzm_prefersNavigationBarHidden == self.navigationController.navigationBarHidden) {
         return ;
     }
