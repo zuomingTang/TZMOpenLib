@@ -58,12 +58,16 @@ typedef void (^_TZMViewControllerWillAppearInjectBlock)(UIViewController *viewCo
     method_exchangeImplementations(originalMethod, swizzledMethod);
 }
 
+static BOOL(^tzm_viewWillAppearBlock)(void);
++(void)tzm_exchangeImplementationsViewWillAppearBlock:(BOOL(^)(void))block{
+    tzm_viewWillAppearBlock = block;
+}
+
 - (void)tzm_viewWillAppear:(BOOL)animated
 {
     // Forward to primary implementation.
     [self tzm_viewWillAppear:animated];
-    if ([self.className rangeOfString:@"GSH"].location == NSNotFound) {
-        //如果是系统的照相界面则不做处理
+    if (!tzm_viewWillAppearBlock()) {
         return;
     }
     if (self.tzm_prefersNavigationBarHidden == self.navigationController.navigationBarHidden) {
