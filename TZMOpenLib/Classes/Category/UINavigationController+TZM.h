@@ -31,7 +31,7 @@
 @property (nonatomic, strong) UIColor *tzm_navigationTintColor;
 @property (nonatomic, strong) UIColor *tzm_navigationBarTintColor;
 
-+(void)tzm_exchangeImplementationsViewWillAppearBlock:(BOOL(^)(void))block;
++(void)tzm_exchangeImplementationsViewWillAppearBlock:(BOOL(^)(UIViewController *vc))block;
 @end
 
 

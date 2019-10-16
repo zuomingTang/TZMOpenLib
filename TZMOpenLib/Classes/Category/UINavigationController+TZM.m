@@ -58,8 +58,8 @@ typedef void (^_TZMViewControllerWillAppearInjectBlock)(UIViewController *viewCo
     method_exchangeImplementations(originalMethod, swizzledMethod);
 }
 
-static BOOL(^tzm_viewWillAppearBlock)(void);
-+(void)tzm_exchangeImplementationsViewWillAppearBlock:(BOOL(^)(void))block{
+static BOOL(^tzm_viewWillAppearBlock)(UIViewController *vc);
++(void)tzm_exchangeImplementationsViewWillAppearBlock:(BOOL(^)(UIViewController *vc))block{
     tzm_viewWillAppearBlock = block;
 }
 
@@ -70,7 +70,7 @@ static BOOL(^tzm_viewWillAppearBlock)(void);
     if (!tzm_viewWillAppearBlock) {
         return;
     }
-    if (!tzm_viewWillAppearBlock()) {
+    if (!tzm_viewWillAppearBlock(self)) {
         return;
     }
     
