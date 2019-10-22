@@ -32,7 +32,7 @@
     return indicatorView;
 }
 
-- (UIActivityIndicatorView *)showActivityIndicator {
+- (UIActivityIndicatorView *)tzm_showActivityIndicator {
     TZM_UIActivityIndicatorView *indicatorView = [self TZM_UIActivityIndicatorView];
     [indicatorView startAnimating];
     
@@ -44,7 +44,7 @@
     return indicatorView;
 }
 
-- (void)hideActivityIndicator {
+- (void)tzm_hideActivityIndicator {
     TZM_UIActivityIndicatorView *indicatorView = [self TZM_UIActivityIndicatorView];
     
     [UIView animateWithDuration:0.2 animations:^{
@@ -54,7 +54,7 @@
     }];
 }
 
-- (UIViewController *)viewController {
+- (UIViewController *)tzm_viewController {
     for (UIView *view = self; view; view = view.superview) {
         UIResponder *nextResponder = [view nextResponder];
         if ([nextResponder isKindOfClass:[UIViewController class]]) {
@@ -64,7 +64,7 @@
     return nil;
 }
 
-- (UINavigationController *)navigationController {
+- (UINavigationController *)tzm_navigationController {
     UIViewController *viewController = [self viewController];
     if ([viewController isKindOfClass:UINavigationController.class]) {
         return (UINavigationController *) viewController;

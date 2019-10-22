@@ -7,14 +7,14 @@
 
 @interface UIView (TZM)
 // 可以给视图加入一个菊花遮罩效果
-- (UIActivityIndicatorView *)showActivityIndicator;
-- (void)hideActivityIndicator;
+- (UIActivityIndicatorView *)tzm_showActivityIndicator;
+- (void)tzm_hideActivityIndicator;
 
 // 获得当前 UIView 所在的 UIViewController
-- (UIViewController *)viewController;
+- (UIViewController *)tzm_viewController;
 
 // 获得当前 UIView 所在的 UINavigationController
-- (UINavigationController *)navigationController;
+- (UINavigationController *)tzm_navigationController;
 
 @end
 
