@@ -11,6 +11,7 @@
 //带文件，leading，和重试的加载视图
 @interface TZMRefreshView : UIView <XXNibBridge>
 @property(nonatomic,copy)NSString *text;
+@property(nonatomic,strong)UIImage *image;
 @property(nonatomic,copy)void(^block)(void);
 -(void)endRefrsh;
 @end

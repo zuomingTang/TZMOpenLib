@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -16,14 +14,14 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CqE-ML-2to">
-                    <rect key="frame" x="139.5" y="327" width="31" height="14.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <rect key="frame" x="148.5" y="326.5" width="31" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="0.80401862157534243" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="z_titleColor" value="#3c4366"/>
+                    </userDefinedRuntimeAttributes>
                 </label>
-                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="hv0-r0-xaf">
-                    <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
-                </activityIndicatorView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w8K-Nm-ddc">
                     <rect key="frame" x="185.5" y="321.5" width="50" height="24"/>
                     <constraints>
@@ -42,28 +40,43 @@
                             <real key="value" value="0.5"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="value" red="0.10980392156862745" green="0.57647058823529407" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="string" keyPath="z_normalStateTitleColor" value="#139cff"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <action selector="touchRefresh:" destination="iN0-l3-epB" eventType="touchUpInside" id="30u-SS-QMn"/>
                     </connections>
                 </button>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="hv0-r0-xaf">
+                    <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
+                </activityIndicatorView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nHd-hf-vnS">
+                    <rect key="frame" x="135.5" y="328.5" width="10" height="10"/>
+                    <constraints>
+                        <constraint firstAttribute="height" priority="1" constant="10" id="eV2-5q-aRX"/>
+                        <constraint firstAttribute="width" priority="1" constant="10" id="pso-nj-oGJ"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="hv0-r0-xaf" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="9k6-Ub-ibh"/>
+                <constraint firstItem="nHd-hf-vnS" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Eqj-3g-PsY"/>
                 <constraint firstItem="CqE-ML-2to" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="ee1-gc-4mP"/>
                 <constraint firstItem="w8K-Nm-ddc" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="ijM-dx-z0P"/>
-                <constraint firstItem="w8K-Nm-ddc" firstAttribute="leading" secondItem="CqE-ML-2to" secondAttribute="trailing" constant="15" id="ikL-WK-lMv"/>
+                <constraint firstItem="w8K-Nm-ddc" firstAttribute="leading" secondItem="CqE-ML-2to" secondAttribute="trailing" constant="6" id="ikL-WK-lMv"/>
                 <constraint firstItem="hv0-r0-xaf" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="jIB-zR-qVe"/>
-                <constraint firstItem="CqE-ML-2to" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" constant="-32.5" id="mmP-hI-Q4u"/>
+                <constraint firstItem="CqE-ML-2to" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" constant="-23.5" id="mmP-hI-Q4u"/>
+                <constraint firstItem="CqE-ML-2to" firstAttribute="leading" secondItem="nHd-hf-vnS" secondAttribute="trailing" constant="3" id="vAW-V8-4LL"/>
             </constraints>
             <connections>
                 <outlet property="aiView" destination="hv0-r0-xaf" id="Yxh-us-Dsl"/>
                 <outlet property="btnRefresh" destination="w8K-Nm-ddc" id="RXo-gL-hs5"/>
+                <outlet property="imageView" destination="nHd-hf-vnS" id="fFG-L1-vF6"/>
                 <outlet property="lblText" destination="CqE-ML-2to" id="KX7-db-Xeq"/>
             </connections>
+            <point key="canvasLocation" x="136.80000000000001" y="152.47376311844079"/>
         </view>
     </objects>
 </document>

@@ -11,12 +11,18 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblText;
 @property (weak, nonatomic) IBOutlet UIButton *btnRefresh;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *aiView;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @end
 
 @implementation TZMRefreshView
 -(void)setText:(NSString *)text{
     _text = text;
     self.lblText.text = text;
+}
+
+-(void)setImage:(UIImage *)image{
+    _image = image;
+    self.imageView.image = image;
 }
 
 - (IBAction)touchRefresh:(id)sender {
@@ -29,6 +35,7 @@
 -(void)endRefrsh{
     self.btnRefresh.hidden = NO;
     self.lblText.hidden = NO;
+    self.imageView.hidden = NO;
     self.aiView.hidden = YES;
     [self.aiView stopAnimating];
 }
@@ -36,6 +43,7 @@
 -(void)startRefrsh{
     self.btnRefresh.hidden = YES;
     self.lblText.hidden = YES;
+    self.imageView.hidden = YES;
     self.aiView.hidden = NO;
     [self.aiView startAnimating];
 }
