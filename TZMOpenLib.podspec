@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TZMOpenLib'
-  s.version          = '0.4.16'
+  s.version          = '0.4.17'
   s.summary          = 'TZMOpenLib'
   
   s.subspec 'Manager' do |sm|
@@ -76,7 +76,7 @@ TODO: TZMOpenLib.
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'zuomingTang' => '414933949@qq.com' }
-  s.source           = { :git => 'https://github.com/zuomingTang/TZMOpenLib.git', :tag => '0.4.16' }
+  s.source           = { :git => 'https://github.com/zuomingTang/TZMOpenLib.git', :tag => '0.4.17' }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
   s.ios.deployment_target = '8.0'
   
