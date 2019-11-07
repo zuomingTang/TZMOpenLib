@@ -81,7 +81,11 @@ SYNTHESIZE_ASC_PRIMITIVE(tzm_isPhoneNumber, setTzm_isPhoneNumber, BOOL);
                 if (toBeString.length > 11) {
                     toBeString = [toBeString substringToIndex:11];
                 }
-                toBeString = [NSString stringWithFormat:@"%@ %@ %@",[toBeString substringWithRange:NSMakeRange(0, 3)],[toBeString substringWithRange:NSMakeRange(3, 4)],[toBeString substringWithRange:NSMakeRange(7, 4)]];
+                if (toBeString.length > 3 && toBeString.length < 8) {
+                    toBeString = [NSString stringWithFormat:@"%@ %@",[toBeString substringToIndex:3],[toBeString substringFromIndex:3]];
+                }else if (toBeString.length > 7) {
+                     toBeString = [NSString stringWithFormat:@"%@ %@ %@",[toBeString substringToIndex:3],[toBeString substringWithRange:NSMakeRange(3, 4)],[toBeString substringFromIndex:7]];
+                }
             }
             textField.text = toBeString;
         }
