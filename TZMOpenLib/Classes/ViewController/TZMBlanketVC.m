@@ -65,26 +65,31 @@
     if(self.currentShowWindow != window) {
         // 先移除队列
         [self.showWindowQueue removeObject:window];
-
-        // 如果当前有在显示的则继续排队
-        if(self.currentShowWindow != nil) {
-            [self.showWindowQueue addObject:window];
+        if (blanketVC.showRightAway) {
+            // 如果当前有在显示的则继续排队
+            if(self.currentShowWindow != nil) {
+                [self.showWindowQueue addObject:self.currentShowWindow];
+            }
+        }else{
+            // 如果当前有在显示的则继续排队
+            if(self.currentShowWindow != nil) {
+                [self.showWindowQueue addObject:window];
+                return;
+            }
         }
-        // 否则显示出来
-        else {
-            wself.currentShowWindow = window;
-            window.alpha = 0;
-            window.userInteractionEnabled = NO;
-            [window makeKeyAndVisible];
-            [UIView animateWithDuration:0.2f animations:^{
-                window.alpha = 1;
-            } completion:^(BOOL finished) {
-                window.userInteractionEnabled = YES;
-            }];
-
+        wself.currentShowWindow = window;
+        if (window.hidden == NO) {
+            return;
         }
+        window.alpha = 0;
+        window.userInteractionEnabled = NO;
+        [window makeKeyAndVisible];
+        [UIView animateWithDuration:0.2f animations:^{
+            window.alpha = 1;
+        } completion:^(BOOL finished) {
+            window.userInteractionEnabled = YES;
+        }];
     }
-
 }
 - (void)closeBlanketVC:(TZMBlanketVC *)blanketVC {
     __weak typeof(self) wself = self;

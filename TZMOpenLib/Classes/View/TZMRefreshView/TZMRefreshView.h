@@ -14,4 +14,5 @@
 @property(nonatomic,strong)UIImage *image;
 @property(nonatomic,copy)void(^block)(void);
 -(void)endRefrsh;
+-(void)startRefrsh;
 @end
