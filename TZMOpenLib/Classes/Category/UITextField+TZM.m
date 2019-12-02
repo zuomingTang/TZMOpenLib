@@ -72,7 +72,7 @@ SYNTHESIZE_ASC_PRIMITIVE(tzm_isPhoneNumber, setTzm_isPhoneNumber, BOOL);
                 // 没有高亮选择的字，则对已输入的文字进行字数统计和限制
                 if (!selectedRange || [selectedRange isEmpty]){
                     if (toBeString.length > self.tzm_maxLen) {
-                        toBeString = [toBeString substringToIndex:self.tzm_maxLen];
+                        textField.text = [toBeString substringToIndex:self.tzm_maxLen];
                     }
                 }
             }
@@ -86,8 +86,8 @@ SYNTHESIZE_ASC_PRIMITIVE(tzm_isPhoneNumber, setTzm_isPhoneNumber, BOOL);
                 }else if (toBeString.length > 7) {
                      toBeString = [NSString stringWithFormat:@"%@ %@ %@",[toBeString substringToIndex:3],[toBeString substringWithRange:NSMakeRange(3, 4)],[toBeString substringFromIndex:7]];
                 }
+                textField.text = toBeString;
             }
-            textField.text = toBeString;
         }
     }
 }
