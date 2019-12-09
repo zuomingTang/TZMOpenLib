@@ -6,10 +6,12 @@
 //
 
 #import "TZMCollectionView.h"
+#import <UIScrollView+TZMRefreshAndLoadMore.h>
 
 @interface TZMCollectionView()
 @property(nonatomic,strong)UILongPressGestureRecognizer *longPress;
 @property(nonatomic,assign)BOOL tzmLoadMoreControlEnabled;
+@property(nonatomic,assign)BOOL movementing;
 @end
 
 @implementation TZMCollectionView
@@ -22,6 +24,13 @@
     return self;
 }
 
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer{
+    if (self.movementing) {
+        return NO;
+    }
+    return self.simultaneouslyGesture;
+}
+
 - (void)lonePressMoving:(UILongPressGestureRecognizer *)longPress{
     if (@available(iOS 9.0, *)){
         switch (self.longPress.state) {
@@ -30,6 +39,7 @@
                 if (indexPath == nil) {
                     break;
                 }
+                self.movementing = YES;
                 [self beginInteractiveMovementForItemAtIndexPath:indexPath];
                 break;
             }
@@ -39,11 +49,13 @@
             }
             case UIGestureRecognizerStateEnded: {
                 [self updateInteractiveMovementTargetPosition:[longPress locationInView:self]];
+                self.movementing = NO;
                 [self endInteractiveMovement];
                 break;
             }
             default:
                 [self cancelInteractiveMovement];
+                self.movementing = NO;
                 break;
         }
     }
