@@ -2,10 +2,12 @@
 //  UITextField+TZM.m
 
 #import "UITextField+TZM.h"
+#import "NSString+TZM.h"
 
 @implementation UITextField (TZM_IB)
 
 SYNTHESIZE_ASC_PRIMITIVE(tzm_maxLen, setTzm_maxLen, NSInteger);
+SYNTHESIZE_ASC_PRIMITIVE(tzm_maxByteLen, setTzm_maxByteLen, NSInteger);
 SYNTHESIZE_ASC_PRIMITIVE(tzm_isPhoneNumber, setTzm_isPhoneNumber, BOOL);
 
 + (void)load {
@@ -66,27 +68,36 @@ SYNTHESIZE_ASC_PRIMITIVE(tzm_isPhoneNumber, setTzm_isPhoneNumber, BOOL);
     if ([notification.name isEqualToString:UITextFieldTextDidChangeNotification]) {
         if (notification.object == self){
             UITextField *textField = (UITextField *)notification.object;
-            NSString *toBeString = textField.text;
+            NSString *originalString = textField.text;
             if (self.tzm_maxLen > 0) {
                 UITextRange *selectedRange = [textField markedTextRange];
                 // 没有高亮选择的字，则对已输入的文字进行字数统计和限制
                 if (!selectedRange || [selectedRange isEmpty]){
-                    if (toBeString.length > self.tzm_maxLen) {
-                        textField.text = [toBeString substringToIndex:self.tzm_maxLen];
+                    if (originalString.length > self.tzm_maxLen) {
+                        textField.text = [originalString substringToIndex:self.tzm_maxLen];
+                    }
+                }
+            }
+            if (self.tzm_maxByteLen > 0) {
+                UITextRange *selectedRange = [textField markedTextRange];
+                // 没有高亮选择的字，则对已输入的文字进行字数统计和限制
+                if (!selectedRange || [selectedRange isEmpty]){
+                    if (originalString.textLength > self.tzm_maxByteLen) {
+                        textField.text = [originalString substringToMaxByte:self.tzm_maxLen];
                     }
                 }
             }
             if (self.tzm_isPhoneNumber) {
-                toBeString = [toBeString stringByReplacingOccurrencesOfString:@" " withString:@""];
-                if (toBeString.length > 11) {
-                    toBeString = [toBeString substringToIndex:11];
+                NSString *phoneString = [originalString stringByReplacingOccurrencesOfString:@" " withString:@""];
+                if (phoneString.length > 11) {
+                    phoneString = [phoneString substringToIndex:11];
                 }
-                if (toBeString.length > 3 && toBeString.length < 8) {
-                    toBeString = [NSString stringWithFormat:@"%@ %@",[toBeString substringToIndex:3],[toBeString substringFromIndex:3]];
-                }else if (toBeString.length > 7) {
-                     toBeString = [NSString stringWithFormat:@"%@ %@ %@",[toBeString substringToIndex:3],[toBeString substringWithRange:NSMakeRange(3, 4)],[toBeString substringFromIndex:7]];
+                if (phoneString.length > 3 && phoneString.length < 8) {
+                    phoneString = [NSString stringWithFormat:@"%@ %@",[phoneString substringToIndex:3],[phoneString substringFromIndex:3]];
+                }else if (phoneString.length > 7) {
+                     phoneString = [NSString stringWithFormat:@"%@ %@ %@",[phoneString substringToIndex:3],[phoneString substringWithRange:NSMakeRange(3, 4)],[phoneString substringFromIndex:7]];
                 }
-                textField.text = toBeString;
+                textField.text = phoneString;
             }
         }
     }

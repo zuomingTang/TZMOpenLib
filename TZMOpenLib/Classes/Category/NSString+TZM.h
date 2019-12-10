@@ -22,4 +22,6 @@
 -(NSUInteger)textLength;
 //是否包含特殊字符
 -(BOOL)judgeTheillegalCharacter;
+
+-(NSString*)substringToMaxByte:(NSInteger)maxByte;
 @end

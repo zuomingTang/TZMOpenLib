@@ -68,6 +68,20 @@
     return unicodeLength;
 }
 
+-(NSString*)substringToMaxByte:(NSInteger)maxByte{
+    NSUInteger asciiLength = 0;
+    NSInteger le = 0;
+    for (NSUInteger i = 0; i < self.length; i++) {
+        unichar uc = [self characterAtIndex: i];
+        asciiLength += isascii(uc) ? 1 : 2;
+        if (asciiLength > maxByte) {
+            break;
+        }
+        le = i;
+    }
+    return [self substringToIndex:le];
+}
+
 //判断是否含有非法字符 yes 有  no没有
 -(BOOL)judgeTheillegalCharacter{
     //提示 标签不能输入特殊字符
