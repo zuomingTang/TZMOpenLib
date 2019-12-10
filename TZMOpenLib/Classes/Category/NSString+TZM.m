@@ -77,7 +77,7 @@
         if (asciiLength > maxByte) {
             break;
         }
-        le = i;
+        le = i + 1;
     }
     return [self substringToIndex:le];
 }

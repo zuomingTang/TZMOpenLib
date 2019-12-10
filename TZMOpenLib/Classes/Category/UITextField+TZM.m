@@ -83,7 +83,7 @@ SYNTHESIZE_ASC_PRIMITIVE(tzm_isPhoneNumber, setTzm_isPhoneNumber, BOOL);
                 // 没有高亮选择的字，则对已输入的文字进行字数统计和限制
                 if (!selectedRange || [selectedRange isEmpty]){
                     if (originalString.textLength > self.tzm_maxByteLen) {
-                        textField.text = [originalString substringToMaxByte:self.tzm_maxLen];
+                        textField.text = [originalString substringToMaxByte:self.tzm_maxByteLen];
                     }
                 }
             }
