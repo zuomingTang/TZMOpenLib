@@ -6,25 +6,25 @@ PODS:
   - ObjcAssociatedObjectHelpers/Core (2.0.1)
   - "ObjcAssociatedObjectHelpers/NSObject+Dictionary (2.0.1)":
     - ObjcAssociatedObjectHelpers/Core
-  - TZMOpenLib (0.4.5):
-    - TZMOpenLib/Category (= 0.4.5)
-    - TZMOpenLib/Manager (= 0.4.5)
-    - TZMOpenLib/RefreshAndLoadMore (= 0.4.5)
-    - TZMOpenLib/StatusView (= 0.4.5)
-    - TZMOpenLib/View (= 0.4.5)
-    - TZMOpenLib/ViewController (= 0.4.5)
-  - TZMOpenLib/Category (0.4.5):
+  - TZMOpenLib (0.4.19.1):
+    - TZMOpenLib/Category (= 0.4.19.1)
+    - TZMOpenLib/Manager (= 0.4.19.1)
+    - TZMOpenLib/RefreshAndLoadMore (= 0.4.19.1)
+    - TZMOpenLib/StatusView (= 0.4.19.1)
+    - TZMOpenLib/View (= 0.4.19.1)
+    - TZMOpenLib/ViewController (= 0.4.19.1)
+  - TZMOpenLib/Category (0.4.19.1):
     - ObjcAssociatedObjectHelpers (= 2.0.1)
     - YYCategories (= 1.0.3)
-  - TZMOpenLib/Manager (0.4.5)
-  - TZMOpenLib/RefreshAndLoadMore (0.4.5):
+  - TZMOpenLib/Manager (0.4.19.1)
+  - TZMOpenLib/RefreshAndLoadMore (0.4.19.1):
     - ObjcAssociatedObjectHelpers (= 2.0.1)
     - YYCategories (= 1.0.3)
-  - TZMOpenLib/StatusView (0.4.5):
+  - TZMOpenLib/StatusView (0.4.19.1):
     - Masonry (= 1.1.0)
-  - TZMOpenLib/View (0.4.5):
+  - TZMOpenLib/View (0.4.19.1):
     - XXNibBridge (= 2.3.1)
-  - TZMOpenLib/ViewController (0.4.5):
+  - TZMOpenLib/ViewController (0.4.19.1):
     - Masonry (= 1.1.0)
   - XXNibBridge (2.3.1)
   - YYCategories (1.0.3):
@@ -48,10 +48,10 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   ObjcAssociatedObjectHelpers: 686c291f292c26a49b9b1fa7d58130a8d35d59d2
-  TZMOpenLib: 21a7aef9aef145a02e2a7614ff928302b47fbe45
+  TZMOpenLib: 31fff1686a95c5a3e5b35b2af581cc72668cbc38
   XXNibBridge: addb780e6db076eb2c61716aa60b176a6799b80f
   YYCategories: 0fd4d9eb0994d8d0e355beb4081c8f7202a82b7b
 
-PODFILE CHECKSUM: 4ecdde9d1ec28a048001881323810f4ea9dfe1e8
+PODFILE CHECKSUM: 82a7e46ac4cd482891878702e06bf6a9e8871931
 
-COCOAPODS: 1.6.0.beta.2
+COCOAPODS: 1.7.0.beta.3

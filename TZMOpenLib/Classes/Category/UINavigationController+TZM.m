@@ -6,15 +6,16 @@
 //
 
 #import "UINavigationController+TZM.h"
+#import <objc/runtime.h>
+#import <YYCategories/YYCategories.h>
+#import <Foundation/Foundation.h>
+#import "UIViewController+TZM.h"
 
 @interface _TZMFullScreenPopGestureRecognizerDelegate : NSObject <UIGestureRecognizerDelegate>
-
 @property (nonatomic, weak) UINavigationController *navigationController;
-
 @end
 
 @implementation _TZMFullScreenPopGestureRecognizerDelegate
-
 - (BOOL)gestureRecognizerShouldBegin:(UIPanGestureRecognizer *)gestureRecognizer{
     // Ignore when no view controller is pushed into the navigation stack.
     if (self.navigationController.viewControllers.count <= 1) {
@@ -39,78 +40,14 @@
     }
     return YES;
 }
-
-@end
-
-typedef void (^_TZMViewControllerWillAppearInjectBlock)(UIViewController *viewController, BOOL animated);
-
-@interface UIViewController (_TZM_NavigationBar)
-
-@property (nonatomic, copy) _TZMViewControllerWillAppearInjectBlock tzm_willAppearInjectBlock;
-
-@end
-
-@implementation UIViewController (_TZM_NavigationBar)
-
-+ (void)load{
-    Method originalMethod = class_getInstanceMethod(self, @selector(viewWillAppear:));
-    Method swizzledMethod = class_getInstanceMethod(self, @selector(tzm_viewWillAppear:));
-    method_exchangeImplementations(originalMethod, swizzledMethod);
-}
-
-static BOOL(^tzm_viewWillAppearBlock)(UIViewController *vc);
-+(void)tzm_exchangeImplementationsViewWillAppearBlock:(BOOL(^)(UIViewController *vc))block{
-    tzm_viewWillAppearBlock = block;
-}
-
-- (void)tzm_viewWillAppear:(BOOL)animated
-{
-    // Forward to primary implementation.
-    [self tzm_viewWillAppear:animated];
-    if (!tzm_viewWillAppearBlock) {
-        return;
-    }
-    if (!tzm_viewWillAppearBlock(self)) {
-        return;
-    }
-    
-    if (self.tzm_prefersNavigationBarHidden == self.navigationController.navigationBarHidden) {
-        return ;
-    }
-    if (self.tzm_willAppearInjectBlock) {
-        self.tzm_willAppearInjectBlock(self, animated);
-    }
-    __weak typeof(self)weakSelf = self;
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(CGFLOAT_MIN * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        if (weakSelf.tzm_prefersNavigationBarHidden) {
-            [weakSelf.navigationController setNavigationBarHidden:YES];
-        } else {
-            [weakSelf.navigationController setNavigationBarHidden:NO];
-        }
-    });
-}
-
-- (_TZMViewControllerWillAppearInjectBlock)tzm_willAppearInjectBlock{
-    return objc_getAssociatedObject(self, _cmd);
-}
-
-- (void)setTzm_willAppearInjectBlock:(_TZMViewControllerWillAppearInjectBlock)block{
-    objc_setAssociatedObject(self, @selector(tzm_willAppearInjectBlock), block, OBJC_ASSOCIATION_COPY_NONATOMIC);
-}
-
 @end
 
 @implementation UINavigationController (TZM)
 
 + (void)load{
     // Inject "-pushViewController:animated:"
-    Method originalMethod = class_getInstanceMethod(self, @selector(pushViewController:animated:));
-    Method swizzledMethod = class_getInstanceMethod(self, @selector(tzm_pushViewController:animated:));
-    method_exchangeImplementations(originalMethod, swizzledMethod);
-
-    Method originalMethodSet = class_getInstanceMethod(self, @selector(setViewControllers:animated:));
-    Method swizzledMethodSet = class_getInstanceMethod(self, @selector(tzm_setViewControllers:animated:));
-    method_exchangeImplementations(originalMethodSet, swizzledMethodSet);
+    [self swizzleInstanceMethod:@selector(pushViewController:animated:) with:@selector(tzm_pushViewController:animated:)];
+    [self swizzleInstanceMethod:@selector(setViewControllers:animated:) with:@selector(tzm_setViewControllers:animated:)];
 }
 
 -(void)tzm_setViewControllers:(NSArray<UIViewController *> *)viewControllers animated:(BOOL)animated{
@@ -132,7 +69,7 @@ static BOOL(^tzm_viewWillAppearBlock)(UIViewController *vc);
     
     if (self.tzm_viewControllerBasedNavigationBarAppearanceEnabled) {
         __weak typeof(self) weakSelf = self;
-        _TZMViewControllerWillAppearInjectBlock block = ^(UIViewController *viewController, BOOL animated) {
+        TZMViewControllerWillAppearInjectBlock block = ^(UIViewController *viewController, BOOL animated) {
             __strong typeof(weakSelf) strongSelf = weakSelf;
             if (strongSelf) {
                 [strongSelf setNavigationBarHidden:viewController.tzm_prefersNavigationBarHidden animated:animated];
@@ -180,8 +117,7 @@ static BOOL(^tzm_viewWillAppearBlock)(UIViewController *vc);
     [self tzm_setViewControllers:viewControllers animated:animated];
 }
 
-- (void)tzm_pushViewController:(UIViewController *)viewController animated:(BOOL)animated
-{
+- (void)tzm_pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
     if (![self.interactivePopGestureRecognizer.view.gestureRecognizers containsObject:self.tzm_fullScreenPopGestureRecognizer]) {
         
         // Add our own gesture recognizer to where the onboard screen edge pan gesture recognizer is attached to.
@@ -199,74 +135,64 @@ static BOOL(^tzm_viewWillAppearBlock)(UIViewController *vc);
     }
     
     // Handle perferred navigation bar appearance.
-    [self tzm_setupViewControllerBasedNavigationBarAppearanceIfNeeded:viewController];
+    if (self.tzm_viewControllerBasedNavigationBarAppearanceEnabled) {
+            __weak typeof(self) weakSelf = self;
+        TZMViewControllerWillAppearInjectBlock block = ^(UIViewController *viewController, BOOL animated) {
+            __strong typeof(weakSelf) strongSelf = weakSelf;
+            if (strongSelf) {
+                [strongSelf setNavigationBarHidden:viewController.tzm_prefersNavigationBarHidden animated:animated];
+                
+                if (viewController.tzm_navigationBackgroundImage) {
+                    [strongSelf.navigationBar setBackgroundImage:viewController.tzm_navigationBackgroundImage forBarMetrics:UIBarMetricsDefault];
+                }else{
+                    [strongSelf.navigationBar setBackgroundImage:[[UINavigationBar appearance] backgroundImageForBarMetrics:UIBarMetricsDefault] forBarMetrics:UIBarMetricsDefault];
+                }
+                
+                if (viewController.tzm_navigationShadowImage) {
+                    [strongSelf.navigationBar setShadowImage:viewController.tzm_navigationShadowImage];
+                }else{
+                    [strongSelf.navigationBar setShadowImage:[UINavigationBar appearance].shadowImage];
+                }
+                
+                if (viewController.tzm_navigationTintColor) {
+                    [strongSelf.navigationBar setTintColor:viewController.tzm_navigationTintColor];
+                }else{
+                    [strongSelf.navigationBar setTintColor:[UINavigationBar appearance].tintColor];
+                }
+                
+                if (viewController.tzm_navigationBarTintColor) {
+                    strongSelf.navigationBar.barTintColor = viewController.tzm_navigationBarTintColor;
+                }else{
+                    strongSelf.navigationBar.barTintColor = [UINavigationBar appearance].barTintColor;
+                }
+                
+                if (viewController.tzm_navigationTitleTextColor) {
+                    [strongSelf.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:viewController.tzm_navigationTitleTextColor}];
+                }else{
+                    [strongSelf.navigationBar setTitleTextAttributes:[UINavigationBar appearance].titleTextAttributes];
+                }
+            }
+        };
+        
+        // Setup will appear inject block to appearing view controller.
+        // Setup disappearing view controller as well, because not every view controller is added into
+        // stack by pushing, maybe by "-setViewControllers:".
+        viewController.tzm_willAppearInjectBlock = block;
+        UIViewController *disappearingViewController = self.viewControllers.lastObject;
+        if (disappearingViewController && !disappearingViewController.tzm_willAppearInjectBlock) {
+            disappearingViewController.tzm_willAppearInjectBlock = block;
+        }
+    }
     
     // Forward to primary implementation.
     [self tzm_pushViewController:viewController animated:animated];
 }
 
-- (void)tzm_setupViewControllerBasedNavigationBarAppearanceIfNeeded:(UIViewController *)appearingViewController
-{
-    if (!self.tzm_viewControllerBasedNavigationBarAppearanceEnabled) {
-        return;
-    }
-    
-    __weak typeof(self) weakSelf = self;
-    _TZMViewControllerWillAppearInjectBlock block = ^(UIViewController *viewController, BOOL animated) {
-        __strong typeof(weakSelf) strongSelf = weakSelf;
-        if (strongSelf) {
-            [strongSelf setNavigationBarHidden:viewController.tzm_prefersNavigationBarHidden animated:animated];
-            
-            if (viewController.tzm_navigationBackgroundImage) {
-                [strongSelf.navigationBar setBackgroundImage:viewController.tzm_navigationBackgroundImage forBarMetrics:UIBarMetricsDefault];
-            }else{
-                [strongSelf.navigationBar setBackgroundImage:[[UINavigationBar appearance] backgroundImageForBarMetrics:UIBarMetricsDefault] forBarMetrics:UIBarMetricsDefault];
-            }
-            
-            if (viewController.tzm_navigationShadowImage) {
-                [strongSelf.navigationBar setShadowImage:viewController.tzm_navigationShadowImage];
-            }else{
-                [strongSelf.navigationBar setShadowImage:[UINavigationBar appearance].shadowImage];
-            }
-            
-            if (viewController.tzm_navigationTintColor) {
-                [strongSelf.navigationBar setTintColor:viewController.tzm_navigationTintColor];
-            }else{
-                [strongSelf.navigationBar setTintColor:[UINavigationBar appearance].tintColor];
-            }
-            
-            if (viewController.tzm_navigationBarTintColor) {
-                strongSelf.navigationBar.barTintColor = viewController.tzm_navigationBarTintColor;
-            }else{
-                strongSelf.navigationBar.barTintColor = [UINavigationBar appearance].barTintColor;
-            }
-            
-            if (viewController.tzm_navigationTitleTextColor) {
-                [strongSelf.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:viewController.tzm_navigationTitleTextColor}];
-            }else{
-                [strongSelf.navigationBar setTitleTextAttributes:[UINavigationBar appearance].titleTextAttributes];
-            }
-        }
-    };
-    
-    // Setup will appear inject block to appearing view controller.
-    // Setup disappearing view controller as well, because not every view controller is added into
-    // stack by pushing, maybe by "-setViewControllers:".
-    appearingViewController.tzm_willAppearInjectBlock = block;
-    UIViewController *disappearingViewController = self.viewControllers.lastObject;
-    if (disappearingViewController && !disappearingViewController.tzm_willAppearInjectBlock) {
-        disappearingViewController.tzm_willAppearInjectBlock = block;
-    }
-}
-
-- (_TZMFullScreenPopGestureRecognizerDelegate *)tzm_popGestureRecognizerDelegate
-{
+- (_TZMFullScreenPopGestureRecognizerDelegate *)tzm_popGestureRecognizerDelegate{
     _TZMFullScreenPopGestureRecognizerDelegate *delegate = objc_getAssociatedObject(self, _cmd);
-
     if (!delegate) {
         delegate = [[_TZMFullScreenPopGestureRecognizerDelegate alloc] init];
         delegate.navigationController = self;
-        
         objc_setAssociatedObject(self, _cmd, delegate, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
     return delegate;
@@ -274,18 +200,15 @@ static BOOL(^tzm_viewWillAppearBlock)(UIViewController *vc);
 
 - (UIPanGestureRecognizer *)tzm_fullScreenPopGestureRecognizer{
     UIPanGestureRecognizer *panGestureRecognizer = objc_getAssociatedObject(self, _cmd);
-
     if (!panGestureRecognizer) {
         panGestureRecognizer = [[UIPanGestureRecognizer alloc] init];
         panGestureRecognizer.maximumNumberOfTouches = 1;
-        
         objc_setAssociatedObject(self, _cmd, panGestureRecognizer, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
     return panGestureRecognizer;
 }
 
-- (BOOL)tzm_viewControllerBasedNavigationBarAppearanceEnabled
-{
+- (BOOL)tzm_viewControllerBasedNavigationBarAppearanceEnabled{
     NSNumber *number = objc_getAssociatedObject(self, _cmd);
     if (number) {
         return number.boolValue;
@@ -294,87 +217,12 @@ static BOOL(^tzm_viewWillAppearBlock)(UIViewController *vc);
     return YES;
 }
 
-- (void)setTzm_viewControllerBasedNavigationBarAppearanceEnabled:(BOOL)enabled
-{
+- (void)setTzm_viewControllerBasedNavigationBarAppearanceEnabled:(BOOL)enabled{
     SEL key = @selector(tzm_viewControllerBasedNavigationBarAppearanceEnabled);
     objc_setAssociatedObject(self, key, @(enabled), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
-
 @end
 
-@implementation UIViewController (TZM_NavigationBar)
-
-- (BOOL)tzm_interactivePopDisabled
-{
-    return [objc_getAssociatedObject(self, _cmd) boolValue];
-}
-
-- (void)setTzm_interactivePopDisabled:(BOOL)disabled
-{
-    objc_setAssociatedObject(self, @selector(tzm_interactivePopDisabled), @(disabled), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
-- (BOOL)tzm_prefersNavigationBarHidden
-{
-    return [objc_getAssociatedObject(self, _cmd) boolValue];
-}
-
-- (void)setTzm_prefersNavigationBarHidden:(BOOL)hidden
-{
-    objc_setAssociatedObject(self, @selector(tzm_prefersNavigationBarHidden), @(hidden), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
-- (UIImage*)tzm_navigationBackgroundImage
-{
-    return objc_getAssociatedObject(self, _cmd);
-}
-
-- (void)setTzm_navigationBackgroundImage:(UIImage*)tzm_navigationBackgroundImage
-{
-    objc_setAssociatedObject(self, @selector(tzm_navigationBackgroundImage), tzm_navigationBackgroundImage, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
-- (UIImage*)tzm_navigationShadowImage
-{
-    return objc_getAssociatedObject(self, _cmd);
-}
-
-- (void)setTzm_navigationShadowImage:(UIImage*)tzm_navigationShadowImage
-{
-    objc_setAssociatedObject(self, @selector(tzm_navigationShadowImage), tzm_navigationShadowImage, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
-- (UIColor*)tzm_navigationTitleTextColor
-{
-    return objc_getAssociatedObject(self, _cmd);
-}
-
-- (void)setTzm_navigationTitleTextColor:(UIColor*)tzm_navigationTitleTextColor
-{
-    objc_setAssociatedObject(self, @selector(tzm_navigationTitleTextColor), tzm_navigationTitleTextColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
-- (UIColor*)tzm_navigationTintColor
-{
-    return objc_getAssociatedObject(self, _cmd);
-}
-
-- (void)setTzm_navigationTintColor:(UIColor*)tzm_navigationTintColor
-{
-    objc_setAssociatedObject(self, @selector(tzm_navigationTintColor), tzm_navigationTintColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
-- (UIColor*)tzm_navigationBarTintColor
-{
-    return objc_getAssociatedObject(self, _cmd);
-}
-
-- (void)setTzm_navigationBarTintColor:(UIColor*)tzm_navigationBarTintColor
-{
-    objc_setAssociatedObject(self, @selector(tzm_navigationBarTintColor), tzm_navigationBarTintColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
-@end
 
 
 @interface UINavigationController (TZM_Back)
@@ -412,22 +260,18 @@ static char originGestureDelegateKey;
 
 - (BOOL)canPopViewController:(UIViewController *)viewController {
     BOOL canPopViewController = YES;
-    
     if ([viewController respondsToSelector:@selector(shouldHoldBackButtonEvent)] &&
         [viewController shouldHoldBackButtonEvent] &&
         [viewController respondsToSelector:@selector(canPopViewController)] &&
         ![viewController canPopViewController]) {
         canPopViewController = NO;
     }
-    
     return canPopViewController;
 }
 
 - (BOOL)tzm_navigationBar:(UINavigationBar *)navigationBar shouldPopItem:(UINavigationItem *)item {
-    
     // 如果nav的vc栈中有两个vc，第一个是root，第二个是second。这是second页面如果点击系统的返回按钮，topViewController获取的栈顶vc是second，而如果是直接代码写的pop操作，则获取的栈顶vc是root。也就是说只要代码写了pop操作，则系统会直接将顶层vc也就是second出栈，然后才回调的，所以这时我们获取到的顶层vc就是root了。然而不管哪种方式，参数中的item都是second的item。
     BOOL isPopedByCoding = item != [self topViewController].navigationItem;
-    
     // !isPopedByCoding 要放在前面，这样当 !isPopedByCoding 不满足的时候就不会去询问 canPopViewController 了，可以避免额外调用 canPopViewController 里面的逻辑导致
     BOOL canPopViewController = !isPopedByCoding && [self canPopViewController:self.tmp_topViewController ?: [self topViewController]];
     
@@ -438,7 +282,6 @@ static char originGestureDelegateKey;
         [self resetSubviewsInNavBar:navigationBar];
         self.tmp_topViewController = nil;
     }
-    
     return NO;
 }
 
@@ -509,9 +352,5 @@ static char originGestureDelegateKey;
     }
     return NO;
 }
-
-@end
-
-@implementation UIViewController (TZM_Back)
 
 @end

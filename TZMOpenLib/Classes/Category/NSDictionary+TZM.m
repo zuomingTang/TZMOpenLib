@@ -2,10 +2,11 @@
 //  NSDictionary+TZM.m
 
 #import "NSDictionary+TZM.h"
+#import <YYCategories/YYCategories.h>
 
 @implementation NSDictionary (TZM)
 
-- (NSString *)URLQueryString{
+- (NSString *)tzm_urlQueryString{
     NSMutableArray *parts = [NSMutableArray array];
     for (NSString *key in self) {
         id value = self[key];
@@ -16,7 +17,7 @@
     return [parts componentsJoinedByString:@"&"];
 }
 
-+ (NSDictionary *)mobileProvisionDictionary {
++ (NSDictionary *)tzm_mobileProvisionDictionary {
     NSDictionary *result = nil;
     NSString *path = [[NSBundle mainBundle] pathForResource:@"embedded" ofType:@"mobileprovision"];
     if (!path){
@@ -56,7 +57,7 @@
     return result;
 }
 
-- (NSDictionary *)queryParamsWithURL:(NSURL*)url{
+- (NSDictionary *)tzm_queryParamsWithURL:(NSURL*)url{
     NSMutableDictionary *result = [NSMutableDictionary dictionary];
     if ( !url.query.length ){
         return result;
@@ -73,7 +74,7 @@
     return result;
 }
 
-+ (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString{
++ (NSDictionary *)tzm_dictionaryWithJsonString:(NSString *)jsonString{
     if (jsonString == nil) {
         return nil;
     }

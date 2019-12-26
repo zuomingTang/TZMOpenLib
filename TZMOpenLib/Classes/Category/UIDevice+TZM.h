@@ -6,9 +6,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <sys/utsname.h>
 
 @interface UIDevice (TZM)
-+ (NSString*)getUUID;
-+ (NSString*)getIPhoneType;
+//获取一个uuid 在APP被删除后重新装uuid不变
++ (NSString*)tzm_getUUID;
+//获取设备的型号
++ (NSString*)tzm_getIPhoneType;
 @end

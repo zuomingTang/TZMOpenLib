@@ -3,6 +3,9 @@
 
 #import "UITextField+TZM.h"
 #import "NSString+TZM.h"
+#import "NSObject+TZM.h"
+#import <YYCategories/YYCategories.h>
+#import <ObjcAssociatedObjectHelpers/ObjcAssociatedObjectHelpers.h>
 
 @implementation UITextField (TZM_IB)
 
@@ -82,8 +85,8 @@ SYNTHESIZE_ASC_PRIMITIVE(tzm_isPhoneNumber, setTzm_isPhoneNumber, BOOL);
                 UITextRange *selectedRange = [textField markedTextRange];
                 // 没有高亮选择的字，则对已输入的文字进行字数统计和限制
                 if (!selectedRange || [selectedRange isEmpty]){
-                    if (originalString.textLength > self.tzm_maxByteLen) {
-                        textField.text = [originalString substringToMaxByte:self.tzm_maxByteLen];
+                    if (originalString.tzm_textLength > self.tzm_maxByteLen) {
+                        textField.text = [originalString tzm_substringToMaxByte:self.tzm_maxByteLen];
                     }
                 }
             }

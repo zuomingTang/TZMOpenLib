@@ -9,19 +9,17 @@
 
 @interface NSString (TZM)
 // 手机号码校验
-- (BOOL)checkMobileNumber;
+- (BOOL)tzm_checkMobileNumber;
 // 判断字符串是否全是空格
-- (BOOL)checkStringIsEmpty;
-// 验证密码输入是否符合规则
-- (BOOL)checkPsd;
-//计算文字长度
-- (CGFloat)getStrWidthWithFontSize:(CGFloat)fontSize;
-//计算文字高度
-- (CGFloat)getStrHeightWithFontSize:(CGFloat)fontSize labelWidth:(CGFloat)labelWidth;
-//文字字节数
--(NSUInteger)textLength;
-//是否包含特殊字符
--(BOOL)judgeTheillegalCharacter;
-
--(NSString*)substringToMaxByte:(NSInteger)maxByte;
+- (BOOL)tzm_checkStringIsEmpty;
+// 计算文字长度
+- (CGFloat)tzm_getStrWidthWithFontSize:(CGFloat)fontSize;
+// 计算文字高度
+- (CGFloat)tzm_getStrHeightWithFontSize:(CGFloat)fontSize labelWidth:(CGFloat)labelWidth;
+// 文字字节数(一个汉字为2个字节)
+- (NSUInteger)tzm_textLength;
+// 是否包含特殊字符
+- (BOOL)tzm_judgeTheillegalCharacter;
+// 截取最大字节数
+- (NSString*)tzm_substringToMaxByte:(NSInteger)maxByte;
 @end

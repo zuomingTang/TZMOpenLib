@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <YYCategories/YYCategories.h>
 
 @interface NSError (TZM)
 

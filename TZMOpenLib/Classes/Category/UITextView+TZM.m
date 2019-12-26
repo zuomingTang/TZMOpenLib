@@ -6,6 +6,9 @@
 //
 
 #import "UITextView+TZM.h"
+#import <YYCategories/YYCategories.h>
+#import "NSObject+TZM.h"
+#import <ObjcAssociatedObjectHelpers/ObjcAssociatedObjectHelpers.h>
 
 @implementation UITextView (TZM_IB)
 

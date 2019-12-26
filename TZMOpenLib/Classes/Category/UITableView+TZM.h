@@ -6,8 +6,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <YYCategories/YYCategories.h>
 
 @interface UITableView (TZM_IB)
+//分割线颜色
 @property (nonatomic) IBInspectable NSString* z_separatorColor;
 @end

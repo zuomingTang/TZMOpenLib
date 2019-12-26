@@ -7,11 +7,14 @@
 //
 
 #import "NSError+TZM.h"
+#import <YYCategories/YYCategories.h>
 
 @implementation NSError (TZM)
+
 + (void)load {
     [self swizzleInstanceMethod:@selector(localizedDescription) with:@selector(tzm_localizedDescription)];
 }
+
 -(NSString *)tzm_localizedDescription{
     NSString *string = [self tzm_localizedDescription];
     if (string.length > 0) {

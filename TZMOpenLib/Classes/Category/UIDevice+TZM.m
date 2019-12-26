@@ -6,28 +6,29 @@
 //
 
 #import "UIDevice+TZM.h"
+#import <sys/utsname.h>
 
 @implementation UIDevice (TZM)
 
 static NSString *_iphoneType;
-+ (NSString*)getIPhoneType{
++ (NSString*)tzm_getIPhoneType{
     if (_iphoneType.length > 0) {
         return _iphoneType;
     }
     struct utsname systemInfo;
     uname(&systemInfo);
-    _iphoneType = [NSString stringWithCString: systemInfo.machine encoding:NSASCIIStringEncoding];
+    _iphoneType = [NSString stringWithCString:systemInfo.machine encoding:NSASCIIStringEncoding];
     return _iphoneType;
 }
 
 static NSString *_UUID;
-+ (NSString*)getUUID{
++ (NSString*)tzm_getUUID{
     if (_UUID.length > 0) {
         return _UUID;
     }
     NSString *uuidString = nil;
     
-    NSString *service = @"com.ienjoys.SmartHome.uuid";
+    NSString *service = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleIdentifier"];
     NSDictionary *query = @{(__bridge id)kSecAttrAccessible:(__bridge id)kSecAttrAccessibleAfterFirstUnlock,
                             (__bridge id)kSecClass:(__bridge id)kSecClassGenericPassword,
                             (__bridge id)kSecAttrService:service,

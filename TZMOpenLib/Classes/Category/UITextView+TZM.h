@@ -6,12 +6,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <YYCategories/YYCategories.h>
-#import "NSObject+TZM.h"
-#import <ObjcAssociatedObjectHelpers/ObjcAssociatedObjectHelpers.h>
 
 @interface UITextView (TZM_IB)
-@property (nonatomic,assign) IBInspectable NSInteger tzm_maxLen; //输入最大长度
+//输入最大长度
+@property (nonatomic,assign) IBInspectable NSInteger tzm_maxLen;
+//默认提示文字
 @property (nonatomic,copy) IBInspectable NSString *tzm_placeholder;
+//默认提示文字lable
 @property (nonatomic,strong,readonly) UILabel *tzm_placeholderLabel;
 @end

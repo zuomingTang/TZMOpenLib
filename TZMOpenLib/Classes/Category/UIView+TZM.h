@@ -2,20 +2,16 @@
 //  UIView+TZM.h
 
 #import <UIKit/UIKit.h>
-#import <YYCategories/YYCategories.h>
-#import <ObjcAssociatedObjectHelpers/ObjcAssociatedObjectHelpers.h>
 
 @interface UIView (TZM)
-// 可以给视图加入一个菊花遮罩效果
+// 给视图显示一个菊花加载遮罩效果
 - (UIActivityIndicatorView *)tzm_showActivityIndicator;
+// 隐藏菊花加载遮罩效果
 - (void)tzm_hideActivityIndicator;
-
 // 获得当前 UIView 所在的 UIViewController
 - (UIViewController *)tzm_viewController;
-
 // 获得当前 UIView 所在的 UINavigationController
 - (UINavigationController *)tzm_navigationController;
-
 @end
 
 

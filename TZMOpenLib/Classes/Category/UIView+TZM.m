@@ -2,6 +2,8 @@
 //  UIView+TZM.m
 
 #import "UIView+TZM.h"
+#import <YYCategories/YYCategories.h>
+#import <ObjcAssociatedObjectHelpers/ObjcAssociatedObjectHelpers.h>
 
 //创建这个类是为了区分view的子视图中原生UIActivityIndicatorView
 @interface TZM_UIActivityIndicatorView : UIActivityIndicatorView
@@ -40,13 +42,11 @@
     [UIView animateWithDuration:0.2 animations:^{
         indicatorView.alpha = 0.618;
     }];
-    
     return indicatorView;
 }
 
 - (void)tzm_hideActivityIndicator {
     TZM_UIActivityIndicatorView *indicatorView = [self TZM_UIActivityIndicatorView];
-    
     [UIView animateWithDuration:0.2 animations:^{
         indicatorView.alpha = 0;
     } completion:^(BOOL finished) {

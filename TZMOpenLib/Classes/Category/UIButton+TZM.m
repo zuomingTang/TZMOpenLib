@@ -2,6 +2,8 @@
 //  UIButton+TZM_IB.m
 
 #import "UIButton+TZM.h"
+#import <YYCategories/YYCategories.h>
+#import <objc/runtime.h>
 
 @implementation UIButton (TZM_IB)
 
@@ -10,6 +12,17 @@
 }
 
 static const NSString *KEY_HIT_TEST_EDGE_INSETS = @"tzm_HitTestEdgeInsets";
+
+- (BOOL)tzm_pointInside:(CGPoint)point withEvent:(UIEvent *)event {
+    if(UIEdgeInsetsEqualToEdgeInsets(self.z_touchHitEdgeInsets, UIEdgeInsetsZero) || !self.enabled || self.hidden) {
+        return [self tzm_pointInside:point withEvent:event];
+    }
+    
+    CGRect relativeFrame = self.bounds;
+    CGRect hitFrame = UIEdgeInsetsInsetRect(relativeFrame, self.z_touchHitEdgeInsets);
+    
+    return CGRectContainsPoint(hitFrame, point);
+}
 
 -(void)setZ_touchHitEdgeInsets:(UIEdgeInsets)hitTestEdgeInsets {
     NSValue *value = [NSValue value:&hitTestEdgeInsets withObjCType:@encode(UIEdgeInsets)];
@@ -25,17 +38,7 @@ static const NSString *KEY_HIT_TEST_EDGE_INSETS = @"tzm_HitTestEdgeInsets";
     }
 }
 
-- (BOOL)tzm_pointInside:(CGPoint)point withEvent:(UIEvent *)event {
-    if(UIEdgeInsetsEqualToEdgeInsets(self.z_touchHitEdgeInsets, UIEdgeInsetsZero) || !self.enabled || self.hidden) {
-        return [self tzm_pointInside:point withEvent:event];
-    }
-    
-    CGRect relativeFrame = self.bounds;
-    CGRect hitFrame = UIEdgeInsetsInsetRect(relativeFrame, self.z_touchHitEdgeInsets);
-    
-    return CGRectContainsPoint(hitFrame, point);
-}
-
+//-------------------------------------------------------
 -(void)setZ_normalStateTitleColor:(NSString *)z_normalStateTitleColor{
     [self setTitleColor:[UIColor colorWithHexString:z_normalStateTitleColor] forState:UIControlStateNormal];
 }

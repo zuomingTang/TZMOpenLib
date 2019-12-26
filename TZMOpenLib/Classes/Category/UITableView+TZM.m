@@ -6,6 +6,7 @@
 //
 
 #import "UITableView+TZM.h"
+#import <YYCategories/YYCategories.h>
 
 @implementation UITableView (TZM_IB)
 
