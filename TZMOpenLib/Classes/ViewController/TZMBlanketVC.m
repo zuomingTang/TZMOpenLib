@@ -48,7 +48,19 @@
     }
 
     if (!window) {
-        window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+        if (@available(iOS 13.0, *)) {
+            UIWindowScene *scene;
+            for (UIScene *model in [[UIApplication sharedApplication] connectedScenes]) {
+                if (model.activationState == UISceneActivationStateForegroundActive && [model isKindOfClass:UIWindowScene.class]) {
+                    scene = model;
+                }
+            }
+            
+            window = [[UIWindow alloc]initWithWindowScene:scene];
+            window.frame = [UIScreen mainScreen].bounds;
+        }else{
+            window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+        }
         window.windowLevel = UIWindowLevelStatusBar + 1;
         window.backgroundColor = [UIColor clearColor];
         window.rootViewController = blanketVC;
