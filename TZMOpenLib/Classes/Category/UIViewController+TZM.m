@@ -7,8 +7,7 @@
 
 #pragma mark-TZM
 @implementation UIViewController (TZM)
-SYNTHESIZE_ASC_PRIMITIVE(tzm_appearCount, setTzm_appearCount, NSInteger);
-SYNTHESIZE_ASC_PRIMITIVE(tzm_isAppearance, setTzm_isAppearance, BOOL); //当前对象是否可以设置全局样式
+SYNTHESIZE_ASC_PRIMITIVE(tzm_appearCount, setTzm_appearCount, NSInteger); //当前对象是否可以设置全局样式
 SYNTHESIZE_ASC_PRIMITIVE(tzm_interactivePopDisabled, setTzm_interactivePopDisabled, BOOL);
 SYNTHESIZE_ASC_PRIMITIVE(tzm_prefersNavigationBarHidden, setTzm_prefersNavigationBarHidden, BOOL);
 SYNTHESIZE_ASC_OBJ(tzm_navigationBackgroundImage, setTzm_navigationBackgroundImage);
@@ -100,12 +99,6 @@ SYNTHESIZE_ASC_OBJ(tzm_navigationBarTintColor, setTzm_navigationBarTintColor);
     }else {
         return nil;
     }
-}
-
-+ (instancetype)tzm_appearance{
-    UIViewController *vc = [UIViewController new];
-    vc.tzm_isAppearance = YES;
-    return vc;
 }
 
 - (BOOL)isFirstAppear {

@@ -3,6 +3,7 @@
 
 #import <UIKit/UIKit.h>
 #import "UINavigationController+TZM.h"
+#import "NSObject+TZM.h"
 
 typedef void (^TZMViewControllerWillAppearInjectBlock)(UIViewController *viewController, BOOL animated);
 
@@ -25,8 +26,6 @@ typedef void (^TZMViewControllerWillAppearInjectBlock)(UIViewController *viewCon
 @property (readonly) BOOL isFirstAppear;
 //定制VC的返回按钮，可全局设置默认
 @property (nonatomic) UIBarButtonItem *tzmBackBarButtonItem UI_APPEARANCE_SELECTOR;
-//获取设置全局样式的对象
-+ (instancetype)tzm_appearance;
 // 获得当前可见的最上层的视图控制器
 + (UIViewController *)visibleTopViewController;
 // 获得目标viewController的最上层的视图控制器

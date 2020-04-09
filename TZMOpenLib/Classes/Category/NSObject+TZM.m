@@ -4,6 +4,7 @@
 //
 
 #import "NSObject+TZM.h"
+#import <ObjcAssociatedObjectHelpers/ObjcAssociatedObjectHelpers.h>
 
 
 @implementation NSObject (TZM_Notification)
@@ -40,4 +41,13 @@
 }
 
 
+@end
+
+@implementation NSObject (TZM_Appearance)
+SYNTHESIZE_ASC_PRIMITIVE(tzm_isAppearance, setTzm_isAppearance, BOOL);
++ (instancetype)tzm_appearance{
+    NSObject *obj = [NSObject new];
+    obj.tzm_isAppearance = YES;
+    return obj;
+}
 @end

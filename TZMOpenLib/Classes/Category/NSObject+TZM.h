@@ -13,3 +13,9 @@
 - (void)handleNotifications:(NSNotification *)notification;
 - (void)removeNotifications;
 @end
+
+@interface NSObject (TZM_Appearance)
+@property (assign, nonatomic) BOOL tzm_isAppearance;
+//获取设置全局样式的对象
++ (instancetype)tzm_appearance;
+@end
